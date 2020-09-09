@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Андрей Кузнецов](https://up.htmlacademy.ru/htmlcss/29/user/98669).
-* Наставник: `[Ирина Шашева](https://htmlacademy.ru/profile/loyso)`.
+* Наставник: <a href="https://htmlacademy.ru/profile/loyso" rel="nofollow">Ирина Шашева</a>
 
 ---
 
