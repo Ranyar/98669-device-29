@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Моноподы для селфи</title>
+  </head>
+  <body>
+    <!-- Хедер, который показывается авторизованному пользователю -->
+    <header>
+       <input type="search" placeholder="Поиск по сайту">
+      <ul>
+        <li><a href="#">Валентин Петухов</a></li>
+        <li><a href="#">Выйти</a></li>
+        <li><a href="#">Сравнить</a></li>
+        <li><a href="#">Корзина</a></li>
+      </ul>
+      <nav>
+        <a href="index.html">
+          <img src="https://via.placeholder.com/163x35" width="163" height="35" alt="Логотип DEVICE">
+        </a>
+        <ul>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Моноподы для селфи</h1>
+      <ul>
+        <li><a href="">Главная</a></li>
+        <li><a href="">Каталог товаров</a></li>
+        <li><a>Моноподы для селфи</a></li><!-- В хлебных крошках текущая страница некликабельна -->
+      </ul>
+      <section>
+        <h2>Фильтр товаров</h2>
+        <!-- Здесь будет форма фильтра товаров -->
+      </section>
+      <section>
+        <h2>Список моноподов для селфи</h2>
+        <p>Сортировка:</p>
+        <!-- Здесь будет фильтр -->
+        <ul>
+          <li>
+            <img src="https://via.placeholder.com/360x380" width="360" height="380" alt="Любительская селфи-палка">
+            <a href="#">
+              <p>Любительская селфи-палка</p>
+            </a>
+            <p>500 руб.</p>
+            <!-- Кнопки, появляющиеся при наведении на карточку товара -->
+            <button type="button">В корзину</button>
+            <button type="button">Добавить к сравнению</button>
+          </li>
+          <li>
+            <img src="https://via.placeholder.com/360x380" width="360" height="380" alt="Профессиональная селфи-палка">
+            <a href="#">
+              <p>Профессиональная селфи-палка</p>
+            </a>
+            <p>1500 руб.</p>
+            <!-- Кнопки, появляющиеся при наведении на карточку товара -->
+            <button type="button">В корзину</button>
+            <button type="button">Добавить к сравнению</button>
+          </li>
+          <li>
+            <img src="https://via.placeholder.com/360x380" width="360" height="380" alt="Непотопляемая селфи-палка">
+            <a href="#">
+              <p>Непотопляемая селфи-палка</p>
+            </a>
+            <p>2500 руб.</p>
+            <!-- Кнопки, появляющиеся при наведении на карточку товара -->
+            <button type="button">В корзину</button>
+            <button type="button">Добавить к сравнению</button>
+          </li>
+          <li>
+            <img src="https://via.placeholder.com/360x380" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+            <a href="#">
+              <p>Селфи-палка «Следуй за мной»</p>
+            </a>
+            <p>4900 руб.</p>
+            <!-- Кнопки, появляющиеся при наведении на карточку товара -->
+            <button type="button">В корзину</button>
+            <button type="button">Добавить к сравнению</button>
+          </li>
+        </ul>
+        <button type="button" disabled>Назад</button><!-- Мы находимся на первой странице пагинации, поэтому кнопка некликабельна -->
+        <ul>
+          <li><a>1</a></li><!-- Пункт пагинации на текущей странице некликабелен -->
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+        </ul>
+        <button type="button">Вперед</button>
+
+      </section>
+
+    </main>
+
+    <!-- Футер, который показывается авторизованному пользователю -->
+    <footer>
+      <ul>
+        <li><a href="#">Валентин Петухов</a></li>
+        <li><a href="#">Выйти</a></li>
+        <li><a href="#">Сравнить</a></li>
+        <li><a href="#">Корзина</a></li>
+      </ul>
+      <address>г. Москва, ул. Строителей, 15</address>
+      <nav>
+        <a>
+          <img src="https://via.placeholder.com/163x35" width="163" height="35" alt="Логотип DEVICE">
+        </a>
+        <ul>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+      <p>Тел.: <a href="tel:+74954959595">+7 (495) 495-95-95</a></p>
+      <section>
+        <h2>Профили в соц. сетях</h2>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </section>
+      <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <!-- Изначально в макете ширина логотипа была дробная (26.94), но валидатор выдал ошибку и я
+        поставил целое число, т.к. оно в пределах допуска и разница не влияет на внешний вид -->
+        <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML Academy">
+      </a>
+      <!-- Там еще был элемент оформления, оранжевый прямоугольник, реализованный средствами CSS, его пока не вставляю, если в этом задании только разметку делаем без стилизации. Наверное, это будет <span></span> -->
+    </footer>
+  </body>
+</html>
