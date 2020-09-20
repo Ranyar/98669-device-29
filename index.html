@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="page-body">
     <!-- Хедер, который показывается неавторизованному пользователю -->
-    <header>
+    <header class="main-header">
        <input type="search" placeholder="Поиск по сайту">
-      <ul>
-        <li><a href="#">Войти</a></li>
-        <li><a href="#">Сравнить</a></li>
-        <li><a href="#">Корзина</a></li>
+      <ul class="header-links">
+        <li><a class="login-link" href="#">Войти</a></li>
+        <li><a class="compare-link" href="#">Сравнить</a></li>
+        <li><a class="cart-link" href="#">Корзина</a></li>
       </ul>
-      <nav>
-        <a>
+      <nav class="main-navigation">
+        <a class="main-header-logo">
           <img src="https://via.placeholder.com/163x35" width="163" height="35" alt="Логотип DEVICE">
         </a>
-        <ul>
+        <ul class="site-navigation">
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Гарантия</a></li>
@@ -27,19 +29,19 @@
       <!-- Там еще был элемент оформления, белый прямоугольник, реализованный средствами CSS, его пока не вставляю, если в этом задании только разметку делаем без стилизации. Наверное, это будет <span></span> -->
     </header>
 
-    <main>
+    <main class="wrapper">
       <h1>Интернет-магазин DEVICE</h1>
-      <div>
+      <div class="featured-products">
         <h2>Популярные товары</h2>
           <!-- Кнопки переключения слайдов. С помощью JS реализовал бы смену слайдов по событию onclick,
           а как сделать средствами CSS - пока не думал -->
-          <ul>
+          <ul class="slider-buttons">
             <li><button type="button"></button></li>
             <li><button type="button"></button></li>
             <li><button type="button"></button></li>
           </ul>
         <!-- Слайд №1 -->
-        <section>
+        <section class="slider slide-1">
           <h3>Делай селфи, как Бен Стиллер!</h3>
           <a href="#">
             <img src="https://via.placeholder.com/384x486" width="384" height="486" alt="Фото моноподов для селфи">
@@ -54,10 +56,10 @@
             <dt>Материал</dt>
             <dd>Карбон</dd>
           </dl>
-          <a href="#">Подробнее</a>
+          <a class="button button-link" href="#">Подробнее</a>
         </section>
         <!-- Слайд №2 -->
-        <section>
+        <section class="slider slide-2">
           <h3>Худеем правильно!</h3>
           <a href="#">
             <img src="https://via.placeholder.com/345x485" width="345" height="485" alt="Фото фитнес-браслета">
@@ -68,10 +70,10 @@
             <dt>Без подзарядки</dt>
             <dd>48 часов</dd>
           </dl>
-          <a href="#">Подробнее</a>
+          <a class="button button-link" href="#">Подробнее</a>
         </section>
          <!-- Слайд №3 -->
-        <section>
+        <section class="slider slide-3">
           <h3>Порхает как бабочка, жалит как пчела!</h3>
           <a href="#">
             <img src="https://via.placeholder.com/526x334" width="526" height="334" alt="Фото дрона">
@@ -84,128 +86,142 @@
             <dt>Радиус поражения</dt>
             <dd>50 м</dd>
           </dl>
-          <a href="#">Подробнее</a>
+          <a class="button button-link" href="#">Подробнее</a>
         </section>
       </div>
-      <section>
+      <section class="popular">
         <h2>Популярные товарные категории</h2>
         <!-- Во всех пунктах нижеследующего списка иконку можно разметить как img, но это скорее не контентное изображение,
         а "фоновая иконка", и можно оформить как CSS background-image у заголовка. Как лучше? Каждый отдельный блок будет кликабелен -->
-        <ul>
-          <li>
+        <ul class="popular-list">
+          <li class="popular-list-item">
             <a href="#">Виртуальная реальность</a>
           </li>
-          <li>
+          <li class="popular-list-item">
             <a href="catalog.html">Моноподы для селфи</a>
           </li>
-          <li>
+          <li class="popular-list-item">
             <a href="#">Экшн-камеры</a>
           </li>
-          <li>
+          <li class="popular-list-item">
             <a href="#">Фитнес-браслеты</a>
           </li>
-          <li>
+          <li class="popular-list-item">
             <a href="#">Умные часы</a>
           </li>
-          <li>
+          <li class="popular-list-item">
             <a href="#">Квадрокоптеры</a>
           </li>
         </ul>
       </section>
-      <section>
+      <section class="services">
         <h2>Сервисы</h2>
-          <ul>
-            <li><button type="button">Доставка</button></li>
-            <li><button type="button">Гарантия</button></li>
-            <li><button type="button">Кредит</button></li>
+          <ul class="services-list">
+            <li class="services-list-item"><button class="button services-button" type="button">Доставка</button></li>
+            <li class="services-list-item"><button class="button services-button" type="button">Гарантия</button></li>
+            <li class="services-list-item"><button class="button services-button" type="button">Кредит</button></li>
           </ul>
           <!-- Первый слайд -->
-          <div>
+          <div class="delivery">
             <h3>Доставка</h3>
-            <p>Мы с удовольствием доставим ваш товар прямо к вашему
+            <p class="delivery-description">Мы с удовольствием доставим ваш товар прямо к вашему
             подъезду совершенно бесплатно! Ведь мы неплохо
             заработаем, поднимая его на ваш этаж.</p>
             <!-- Фоновая иконка будет, вероятно, background-image -->
           </div>
           <!-- Второй слайд -->
-          <div>
+          <div class="warranty">
             <h3>Гарантия</h3>
-            <p>Если из-за возгорания купленного у нас товара у вас сгорит дом —
+            <p class="warranty-description">Если из-за возгорания купленного у нас товара у вас сгорит дом —
             не переживайте, мы выдадим вам новый.
             Товар, не дом, конечно же.</p>
             <!-- Фоновая иконка будет, вероятно, background-image -->
           </div>
           <!-- Третий слайд -->
-          <div>
+          <div class="loan">
             <h3>Кредит</h3>
-            <p>Залезть в долговую яму стало проще! Кредитные консультанты
+            <p class="loan-description">Залезть в долговую яму стало проще! Кредитные консультанты
             подберут для вас наиболее выгодные
             условия кредита. Выгодные для нашего банка, разумеется.</p>
             <!-- Фоновая иконка будет, вероятно, background-image -->
           </div>
       </section>
-      <section>
+      <section class="partners">
         <h2>Логотипы партнеров</h2>
-        <!-- Не нашел в ТЗ информации о том, должны ли быть логотипы партнеров кликабельны, поэтому пока
-        сделал списком без ссылок -->
-        <ul>
-          <li><a href="#"><img src="https://via.placeholder.com/260x100" width="260" height="100" alt="Логотип DJI"></a></li>
-          <li><a href="#"><img src="https://via.placeholder.com/260x100" width="260" height="100" alt="Логотип SP Gadgets"></a></li>
-          <li><a href="#"><img src="https://via.placeholder.com/260x100" width="260" height="100" alt="Логотип GoPro"></a></li>
-          <li><a href="#"><img src="https://via.placeholder.com/260x100" width="260" height="100" alt="Логотип Vive"></a></li>
+        <ul class="partners-list">
+          <li class="partners-list-item">
+            <a href="#"><img src="https://via.placeholder.com/260x100" width="260" height="100" alt="Логотип DJI"></a>
+          </li>
+          <li class="partners-list-item">
+            <a href="#"><img src="https://via.placeholder.com/260x100" width="260" height="100" alt="Логотип SP Gadgets"></a>
+          </li>
+          <li class="partners-list-item">
+            <a href="#"><img src="https://via.placeholder.com/260x100" width="260" height="100" alt="Логотип GoPro"></a>
+          </li>
+          <li class="partners-list-item">
+            <a href="#"><img src="https://via.placeholder.com/260x100" width="260" height="100" alt="Логотип Vive"></a>
+          </li>
         </ul>
       </section>
-      <section>
-        <!-- Декоративный ректангл, возможно, span+CSS -->
-        <h2>О нас</h2>
-        <p>Огромный выбор гаджетов не оставит равнодушным гика,
-        который есть в каждом из нас.</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки
-        России! DEVICE работает со многими транспортными компаниями:</p>
-        <ul>
-          <li><a href="#">Деловые линии</a></li>
-          <li><a href="#">Автотрейдинг</a></li>
-          <li><a href="#">ЖелДорЭкспедиция</a></li>
-        </ul>
-        <a href="#">Подробнее о нас</a>
-      </section>
-      <section>
-        <h2>Контакты</h2>
-        <!-- Декоративный ректангл, возможно, span+CSS -->
-        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
-        проверить работоспособность покупки. Всякое бывает.</p>
-        <a href="#">
-          <img src="https://via.placeholder.com/560x222" width="560" height="222" alt="Карта проезда">
-        </a>
-        <button type="button">Напишите нам</button>
-      </section>
+      <div class="double-block"><!-- Два нижеописанных section на макете как бы в одном блоке, поэтому обернул в общий div-->
+        <section class="about">
+          <!-- Декоративный ректангл, возможно, span+CSS -->
+          <h2>О нас</h2>
+          <p>Огромный выбор гаджетов не оставит равнодушным гика,
+          который есть в каждом из нас.</p>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки
+          России! DEVICE работает со многими транспортными компаниями:</p>
+          <ul class="logistics-list">
+            <li class="logistics-list-item">
+              <a href="#">Деловые линии</a>
+            </li>
+            <li class="logistics-list-item">
+              <a href="#">Автотрейдинг</a>
+            </li>
+            <li class="logistics-list-item">
+              <a href="#">ЖелДорЭкспедиция</a>
+            </li>
+          </ul>
+          <a class="button button-link" href="#">Подробнее о нас</a>
+        </section>
+        <section class="contacts">
+          <h2>Контакты</h2>
+          <!-- Декоративный ректангл, возможно, span+CSS -->
+          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
+          проверить работоспособность покупки. Всякое бывает.</p>
+          <a class="contacts-map" href="#">
+            <img src="https://via.placeholder.com/560x222" width="560" height="222" alt="Карта проезда">
+          </a>
+          <button class="button contacts-button" type="button">Напишите нам</button>
+        </section>
+      </div>
     </main>
 
     <!-- Футер, который показывается неавторизованному пользователю -->
-    <footer>
-      <ul>
-        <li><a href="#">Войти</a></li>
-        <li><a href="#">Сравнить</a></li>
-        <li><a href="#">Корзина</a></li>
+    <footer class="page-footer">
+      <ul class="footer-links">
+        <li><a class="login-link" href="#">Войти</a></li>
+        <li><a class="compare-link" href="#">Сравнить</a></li>
+        <li><a class="cart-link" href="#">Корзина</a></li>
       </ul>
-      <address>г. Москва, ул. Строителей, 15</address>
-      <nav>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="https://via.placeholder.com/163x35" width="163" height="35" alt="Логотип HTML Academy">
+      <address class="address">г. Москва, ул. Строителей, 15</address>
+      <nav class="footer-navigation">
+        <a class="page-footer-logo" href="#">
+          <img src="https://via.placeholder.com/163x35" width="163" height="35" alt="Логотип интернет-магазина Device">
         </a>
-        <ul>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
+        <ul class="navigation-list">
+          <li class="navigation-list-item"><a href="#">Доставка</a></li>
+          <li class="navigation-list-item"><a href="#">Гарантия</a></li>
+          <li class="navigation-list-item"><a href="#">Контакты</a></li>
         </ul>
       </nav>
-      <p>Тел.: <a href="tel:+74954959595">+7 (495) 495-95-95</a></p>
-      <section>
+      <p>Тел.: <a class="phone" href="tel:+74954959595">+7 (495) 495-95-95</a></p>
+      <section class="footer-social">
         <h2>Профили в соц. сетях</h2>
-        <ul>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Twitter</a></li>
+        <ul class="social-list">
+          <li class="social-list-item"><a class="social-button" href="#">Facebook</a></li>
+          <li class="social-list-item"><a class="social-button" href="#">Instagram</a></li>
+          <li class="social-list-item"><a class="social-button" href="#">Twitter</a></li>
         </ul>
       </section>
       <a href="https://htmlacademy.ru/intensive/htmlcss">
@@ -216,12 +232,16 @@
       <!-- Там еще был элемент оформления, оранжевый прямоугольник, реализованный средствами CSS, его пока не вставляю, если в этом задании только разметку делаем без стилизации. Наверное, это будет <span></span> -->
     </footer>
     <!-- Модальное окно с формой обратной связи "Напишите нам" -->
-    <section>
+    <section class="modal modal-write_us">
       <h2>Напишите нам</h2>
+      <!-- Здесь будет сама форма -->
+      <button class="button modal-button" type="button">Отправить</button>
+      <button class="modal-close" type="button"></button>
     </section>
     <!-- Модальное окно "Карта проезда" -->
-    <section>
+    <section class="modal modal-map">
       <h2>Карта проезда</h2>
+      <!-- Здесь будет сама форма. Нужна ли кнопка "закрыть", если ее нет в макете? -->
     </section>
   </body>
 </html>

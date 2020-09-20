@@ -1,0 +1,478 @@
+/* Кастомные свойства (палитра) */
+:root {
+  /* Основная палитра */
+  --basic-black: #000000;
+  --basic-dark: #363636;
+  --basic-grey: #464646;
+  --basic-half-grey: #7E7E7E;
+  --basic-grey-light: #E5E5E5;
+  --basic-white: #FFFFFF;
+ /* Дополнительная палитра */
+  --special-yellow: #F7E296;
+  --special-yellow-dark: #F0C52E;
+  --special-yellow-light: #F7E296;
+  --special-green: #91C92F;
+ /* Статус */
+  --special-status: #F6DADA;
+}
+
+/* Шрифты */
+/* Надо ли здесь и ниже задавать src: local('')? И нужно ли явно задавать font-weight font-style?*/
+@font-face {
+  font-family: "Gilroy";
+  src:
+  url("../fonts/gilroyextrabold.woff2") format('woff2'),
+  url("../fonts/gilroyextrabold.woff") format('woff');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src:
+  url("../fonts/gilroylight.woff2") format("woff2"),
+  url("../fonts/gilroylight.woff") format("woff");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src:
+  url("../fonts/fonts/opensans.woff2") format("woff2"),
+  url("../fonts/fonts/opensans.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src:
+  url("../fonts/fonts/opensanslight.woff2") format("woff2"),
+  url("../fonts/fonts/opensanslight.woff") format("woff");
+  font-weight: 300;
+}
+
+/* Общие стили */
+
+body {
+  min-width: 1440px;
+  font-family: Open Sans, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  font-style: normal;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%; /* Чтобы изображения не выходили за пределы родительских элементов */
+  height: auto; /* Автоматическая высота для пропорционального изменения размеров */
+}
+
+/* Хедер */
+.main-header {
+  background-color: var(--special-yellow);
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.main-navigation {
+  font-family: Gilroy, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+}
+
+.site-navigation,
+.header-links {
+  list-style: none;
+}
+
+.site-navigation a,
+.header-links a {
+  color: var(--basic-black);
+}
+
+.site-navigation a:hover,
+.header-links a:hover {
+  opacity: 0.6;
+}
+
+.site-navigation a:focus,
+.header-links a:focus {
+  opacity: 0.3;
+}
+
+.header-links {
+  font-family: Open Sans, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+/* Слайдер */
+
+.featured-products {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.slider-buttons {
+  list-style: none;
+}
+
+.slider h3 {
+  font-family: Gilroy, Arial, sans-serif;
+  font-style: normal;
+  font-size: 47px;
+  line-height: 58px;
+}
+
+.slider p {
+  line-height: 20px;
+}
+
+.slider dd {
+  font-family: Gilroy, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  /* identical to box height */
+  letter-spacing: 0.1em;
+}
+
+.slider dt {
+  font-family: Gilroy, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+  /* identical to box height */
+  letter-spacing: 0.1em;
+}
+
+.button {
+  font-family: Gilroy, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  background: linear-gradient(to top, transparent 40%,
+    var(--special-yellow-dark) 40%,
+    var(--special-yellow-dark) 59%,
+    transparent 59%);
+}
+
+.button-link {
+    padding: 10px 40px;
+}
+
+ .button-link:hover {
+  background: linear-gradient(to top, transparent 0%,
+  var(--special-yellow-dark) 0%,
+  var(--special-yellow-dark) 100%,
+  transparent 100%);
+}
+
+ .button-link:active {
+  background: linear-gradient(to top, transparent 0%,
+  var(--special-yellow-dark) 0%,
+  var(--special-yellow-dark) 100%,
+  transparent 100%);
+  opacity: 0.3;
+}
+
+/* Популярные категории товаров */
+.popular {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.popular-list {
+  list-style: none;
+}
+
+.popular-list-item {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+}
+
+.popular-list-item a{
+  color: var(--basic-black);
+  background-color: var(--special-yellow-light);
+}
+
+.popular-list-item a:hover{
+  background-color: var(--special-yellow-dark);
+}
+
+.popular-list-item a:active{
+  opacity: 0.3;
+  background-color: var(--special-yellow-dark);
+}
+
+/* Сервисы */
+.services {
+  margin: 0 auto;
+  background-color: var(--basic-grey-light);
+}
+
+.services-list {
+  list-style: none;
+}
+
+.services-button {
+  border: none;
+  box-sizing: border-box;
+  width: 160px;
+  height: 40px;
+}
+
+.services-button:hover {
+  background: linear-gradient(to top, transparent 0%,
+  var(--special-yellow-dark) 0%,
+  var(--special-yellow-dark) 100%,
+  transparent 100%);
+}
+
+.services-button:active,
+.services-button:focus {
+  background: linear-gradient(to top, transparent 0%,
+  var(--basic-black) 0%,
+  var(--basic-black) 100%,
+  transparent 100%);
+  color: var(--special-yellow);
+  border-radius: 0px;
+  box-sizing: border-box;
+  width: 277px;
+  text-align: left;
+  padding-left: 23px;/* Разметить для каждого элемента отдельно для pixel-perfect */
+  outline: 0;
+}
+
+.services h3 {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  /* identical to box height */
+  letter-spacing: 0.2em;
+}
+
+.services p {
+  line-height: 28px;
+  /* or 187% */
+  letter-spacing: 0.1em;
+}
+
+/* Логотипы партнеров */
+.partners {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.partners-list {
+  list-style: none;
+}
+
+.double-block {
+  width: 1140;
+  margin: 0 auto;
+}
+
+/* О нас */
+
+.about {
+  width: 560px;
+}
+
+.about h2 {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  /* identical to box height */
+  letter-spacing: 0.2em;
+}
+
+.about p {
+  line-height: 28px;
+}
+
+.logistics-list {
+  list-style: circle;/* Здесь вместо circle можно вставить list-style-image с svg-иконкой. Как вставлять css-рисунки я пока не знаю */
+}
+
+.logistics-list-item a {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 28px;
+/* or 175% */
+  color: var(--basic-black);
+}
+
+.about .button-link {
+  padding: 9px 21px;
+  background: linear-gradient(to top, transparent 40%,
+  var(--special-yellow-dark) 40%,
+  var(--special-yellow-dark) 61%,
+  transparent 61%);
+}
+
+/* Контакты */
+.contacts {
+  width: 560px;
+}
+
+.contacts h2 {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  letter-spacing: 0.2em;
+  color: var(--basic-black);
+}
+
+.contacts-button {
+  border: none;
+  box-sizing: border-box;
+  width: 260px;
+  height: 40px;
+}
+
+.contacts-button:hover {
+  background: linear-gradient(to top, transparent 0%,
+  var(--special-yellow-dark) 0%,
+  var(--special-yellow-dark) 100%,
+  transparent 100%);
+}
+
+ .contacts-button:active,
+ .contacts-button:focus {
+  background: linear-gradient(to top, transparent 0%,
+  var(--special-yellow-dark) 0%,
+  var(--special-yellow-dark) 100%,
+  transparent 100%);
+  outline: 0;
+  opacity: 0.3;
+}
+
+/* Подвал */
+
+.page-footer {
+  background-color: var(--basic-dark);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links a {
+  color: var(--basic-white);
+}
+
+.footer-links a:hover {
+  opacity: 0.6;
+}
+
+.footer-links a:focus {
+  opacity: 0.3;
+}
+
+.footer-links {
+  font-family: Open Sans, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.navigation-list {
+  list-style: none;
+}
+
+.navigation-list a {
+  font-family: Gilroy, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+
+.navigation-list  a {
+  color: var(--basic-white);
+}
+
+.navigation-list  a:hover {
+  opacity: 0.6;
+}
+
+.navigation-list  a:focus {
+  opacity: 0.3;
+}
+
+.address,
+.phone,
+.page-footer p {
+  font-family: Open Sans, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-white);
+}
+
+.social-list {
+  list-style: none;
+}
+
+/* Модальные окна */
+
+.modal-button {
+  border: none;
+  box-sizing: border-box;
+  width: 260px;
+  height: 40px;
+}
+
+.modal-button:hover {
+  background: linear-gradient(to top, transparent 0%,
+  var(--special-yellow-dark) 0%,
+  var(--special-yellow-dark) 100%,
+  transparent 100%);
+}
+
+ .modal-button:active,
+ .modal-button:focus {
+  background: linear-gradient(to top, transparent 0%,
+  var(--special-yellow-dark) 0%,
+  var(--special-yellow-dark) 100%,
+  transparent 100%);
+  outline: 0;
+  opacity: 0.3;
+}
