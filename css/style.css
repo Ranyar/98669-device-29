@@ -1,29 +1,29 @@
 /* Кастомные свойства (палитра) */
 :root {
   /* Основная палитра */
-  --basic-black: #000000;
-  --basic-dark: #363636;
-  --basic-grey: #464646;
-  --basic-half-grey: #7E7E7E;
-  --basic-grey-light: #E5E5E5;
-  --basic-white: #FFFFFF;
- /* Дополнительная палитра */
-  --special-yellow: #F7E296;
-  --special-yellow-dark: #F0C52E;
-  --special-yellow-light: #F7E296;
-  --special-green: #91C92F;
- /* Статус */
-  --special-status: #F6DADA;
+  --black: #000000;
+  --dark: #363636;
+  --grey: #464646;
+  --half-grey: #7E7E7E;
+  --grey-light: #E5E5E5;
+  --white: #FFFFFF;
+  /* Дополнительная палитра */
+  --yellow: #F7E296;
+  --yellow-dark: #F0C52E;
+  --yellow-light: #F7E296;
+  --green: #91C92F;
+  /* Статус */
+  --status: #F6DADA;
 }
 
 /* Шрифты */
-/* Надо ли здесь и ниже задавать src: local('')? И нужно ли явно задавать font-weight font-style?*/
 @font-face {
   font-family: "Gilroy";
   src:
-  url("../fonts/gilroyextrabold.woff2") format('woff2'),
-  url("../fonts/gilroyextrabold.woff") format('woff');
+  url("../fonts/gilroyextrabold.woff2") format("woff2"),
+  url("../fonts/gilroyextrabold.woff") format("woff");
   font-weight: 800;
+  font-style: normal;
 }
 
 @font-face {
@@ -32,22 +32,25 @@
   url("../fonts/gilroylight.woff2") format("woff2"),
   url("../fonts/gilroylight.woff") format("woff");
   font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "Open Sans";
   src:
-  url("../fonts/fonts/opensans.woff2") format("woff2"),
-  url("../fonts/fonts/opensans.woff") format("woff");
+  url("../fonts/opensans.woff2") format("woff2"),
+  url("../fonts/opensans.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "Open Sans";
   src:
-  url("../fonts/fonts/opensanslight.woff2") format("woff2"),
-  url("../fonts/fonts/opensanslight.woff") format("woff");
+  url("../fonts/opensanslight.woff2") format("woff2"),
+  url("../fonts/opensanslight.woff") format("woff");
   font-weight: 300;
+  font-style: normal;
 }
 
 /* Общие стили */
@@ -58,7 +61,8 @@ body {
   font-size: 15px;
   font-weight: 300;
   font-style: normal;
-
+  color: var(--black);
+  line-height: 28px;
 }
 
 a {
@@ -72,9 +76,7 @@ img {
 
 /* Хедер */
 .main-header {
-  background-color: var(--special-yellow);
-  width: 1140px;
-  margin: 0 auto;
+  background-color: var(--yellow);
 }
 
 .main-navigation {
@@ -96,7 +98,7 @@ img {
 
 .site-navigation a,
 .header-links a {
-  color: var(--basic-black);
+  color: var(--black);
 }
 
 .site-navigation a:hover,
@@ -110,19 +112,15 @@ img {
 }
 
 .header-links {
-  font-family: Open Sans, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 15px;
   line-height: 20px;
 }
 
 /* Слайдер */
 
+/* Потом назначу гриды
 .featured-products {
-  width: 1140px;
-  margin: 0 auto;
 }
+*/
 
 .slider-buttons {
   list-style: none;
@@ -139,23 +137,16 @@ img {
   line-height: 20px;
 }
 
-.slider dd {
+.slider-def {
   font-family: Gilroy, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 36px;
-  line-height: 42px;
-  /* identical to box height */
+  font-size: 13px;
+  line-height: 15px;
   letter-spacing: 0.1em;
 }
 
-.slider dt {
-  font-family: Gilroy, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 13px;
-  line-height: 15px;
-  /* identical to box height */
+.slider-def dd {
+  font-size: 36px;
+  line-height: 42px;
   letter-spacing: 0.1em;
 }
 
@@ -168,69 +159,68 @@ img {
   /* identical to box height */
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--basic-black);
+  color: var(--black);
   background: linear-gradient(to top, transparent 40%,
-    var(--special-yellow-dark) 40%,
-    var(--special-yellow-dark) 59%,
-    transparent 59%);
+  var(--yellow-dark) 40%,
+  var(--yellow-dark) 60%,
+  transparent 60%);
+  border: none;
+  box-sizing: border-box;
+  padding: 9px 42px;
+  outline: 0;
 }
 
-.button-link {
-    padding: 10px 40px;
+.button:hover {
+  background: var(--yellow-dark);
 }
 
- .button-link:hover {
+.button:active {
   background: linear-gradient(to top, transparent 0%,
-  var(--special-yellow-dark) 0%,
-  var(--special-yellow-dark) 100%,
-  transparent 100%);
-}
-
- .button-link:active {
-  background: linear-gradient(to top, transparent 0%,
-  var(--special-yellow-dark) 0%,
-  var(--special-yellow-dark) 100%,
+  var(--yellow-dark) 0%,
+  var(--yellow-dark) 100%,
   transparent 100%);
   opacity: 0.3;
 }
 
 /* Популярные категории товаров */
+
+/* Потом назначу гриды
 .popular {
   width: 1140px;
   margin: 0 auto;
 }
+*/
 
 .popular-list {
   list-style: none;
 }
 
 .popular-list-item {
-  font-family: Gilroy;
-  font-style: normal;
+  font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.05em;
 }
 
-.popular-list-item a{
-  color: var(--basic-black);
-  background-color: var(--special-yellow-light);
+.popular-list-item a {
+  color: var(--black);
+  background-color: var(--yellow-light);
 }
 
-.popular-list-item a:hover{
-  background-color: var(--special-yellow-dark);
+.popular-list-item a:hover {
+  background-color: var(--yellow-dark);
 }
 
-.popular-list-item a:active{
+.popular-list-item a:active {
   opacity: 0.3;
-  background-color: var(--special-yellow-dark);
+  background-color: var(--yellow-dark);
 }
 
 /* Сервисы */
 .services {
   margin: 0 auto;
-  background-color: var(--basic-grey-light);
+  background-color: var(--grey-light);
 }
 
 .services-list {
@@ -238,37 +228,42 @@ img {
 }
 
 .services-button {
-  border: none;
-  box-sizing: border-box;
-  width: 160px;
-  height: 40px;
-}
-
-.services-button:hover {
-  background: linear-gradient(to top, transparent 0%,
-  var(--special-yellow-dark) 0%,
-  var(--special-yellow-dark) 100%,
-  transparent 100%);
+  padding: 9px;
+  min-width: 160px;
 }
 
 .services-button:active,
 .services-button:focus {
-  background: linear-gradient(to top, transparent 0%,
-  var(--basic-black) 0%,
-  var(--basic-black) 100%,
-  transparent 100%);
-  color: var(--special-yellow);
+  background: var(--black);
+  color: var(--yellow);
   border-radius: 0px;
   box-sizing: border-box;
   width: 277px;
   text-align: left;
-  padding-left: 23px;/* Разметить для каждого элемента отдельно для pixel-perfect */
+  min-width: 177px;
   outline: 0;
+  opacity: 1;
+}
+
+/* Следующие 3 CSS-правила с разными padding-left нужны для того, чтобы идеально спозиционировать надпись в кнопке,
+у которой меняется ширина по нажатию */
+li:nth-child(1) .services-button:active,
+li:nth-child(1) .services-button:nth-child(1):focus {
+  padding-left: 18px;
+}
+
+li:nth-child(2) .services-button:active,
+li:nth-child(2) .services-button:nth-child(1):focus {
+  padding-left: 23px;
+}
+
+li:nth-child(3) .services-button:active,
+li:nth-child(3) .services-button:nth-child(1):focus {
+  padding-left: 36px;
 }
 
 .services h3 {
-  font-family: Gilroy;
-  font-style: normal;
+  font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -283,19 +278,25 @@ img {
 }
 
 /* Логотипы партнеров */
+
+/* Потом назначу гриды
 .partners {
   width: 1140px;
   margin: 0 auto;
 }
+*/
+
 
 .partners-list {
   list-style: none;
 }
 
+/* Потом назначу гриды
 .double-block {
   width: 1140;
   margin: 0 auto;
 }
+*/
 
 /* О нас */
 
@@ -304,8 +305,7 @@ img {
 }
 
 .about h2 {
-  font-family: Gilroy;
-  font-style: normal;
+  font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -317,26 +317,23 @@ img {
   line-height: 28px;
 }
 
+/* Будем делать через псевдоэлементы, пока закрываю в коммент
 .logistics-list {
-  list-style: circle;/* Здесь вместо circle можно вставить list-style-image с svg-иконкой. Как вставлять css-рисунки я пока не знаю */
+
 }
+*/
 
 .logistics-list-item a {
-  font-family: Gilroy;
-  font-style: normal;
+  font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 28px;
 /* or 175% */
-  color: var(--basic-black);
+  color: var(--black);
 }
 
-.about .button-link {
+.button-about {
   padding: 9px 21px;
-  background: linear-gradient(to top, transparent 40%,
-  var(--special-yellow-dark) 40%,
-  var(--special-yellow-dark) 61%,
-  transparent 61%);
 }
 
 /* Контакты */
@@ -345,43 +342,23 @@ img {
 }
 
 .contacts h2 {
-  font-family: Gilroy;
-  font-style: normal;
+  font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
   letter-spacing: 0.2em;
-  color: var(--basic-black);
+  color: var(--black);
 }
 
-.contacts-button {
-  border: none;
-  box-sizing: border-box;
-  width: 260px;
-  height: 40px;
-}
-
-.contacts-button:hover {
-  background: linear-gradient(to top, transparent 0%,
-  var(--special-yellow-dark) 0%,
-  var(--special-yellow-dark) 100%,
-  transparent 100%);
-}
-
- .contacts-button:active,
- .contacts-button:focus {
-  background: linear-gradient(to top, transparent 0%,
-  var(--special-yellow-dark) 0%,
-  var(--special-yellow-dark) 100%,
-  transparent 100%);
-  outline: 0;
-  opacity: 0.3;
-}
+ .contacts-button {
+  padding-right: 39px;
+  padding-left: 39px;
+ }
 
 /* Подвал */
 
 .page-footer {
-  background-color: var(--basic-dark);
+  background-color: var(--dark);
 }
 
 .footer-links {
@@ -389,7 +366,7 @@ img {
 }
 
 .footer-links a {
-  color: var(--basic-white);
+  color: var(--white);
 }
 
 .footer-links a:hover {
@@ -401,10 +378,6 @@ img {
 }
 
 .footer-links {
-  font-family: Open Sans, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 15px;
   line-height: 20px;
 }
 
@@ -414,18 +387,17 @@ img {
 
 .navigation-list a {
   font-family: Gilroy, Arial, sans-serif;
-  font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
   /* identical to box height */
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--basic-white);
+  color: var(--white);
 }
 
 .navigation-list  a {
-  color: var(--basic-white);
+  color: var(--white);
 }
 
 .navigation-list  a:hover {
@@ -436,15 +408,15 @@ img {
   opacity: 0.3;
 }
 
+.address {
+  font-style: normal;
+}
+
 .address,
 .phone,
 .page-footer p {
-  font-family: Open Sans, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 15px;
   line-height: 20px;
-  color: var(--basic-white);
+  color: var(--white);
 }
 
 .social-list {
@@ -454,25 +426,6 @@ img {
 /* Модальные окна */
 
 .modal-button {
-  border: none;
-  box-sizing: border-box;
-  width: 260px;
-  height: 40px;
-}
-
-.modal-button:hover {
-  background: linear-gradient(to top, transparent 0%,
-  var(--special-yellow-dark) 0%,
-  var(--special-yellow-dark) 100%,
-  transparent 100%);
-}
-
- .modal-button:active,
- .modal-button:focus {
-  background: linear-gradient(to top, transparent 0%,
-  var(--special-yellow-dark) 0%,
-  var(--special-yellow-dark) 100%,
-  transparent 100%);
-  outline: 0;
-  opacity: 0.3;
+  padding-left: 34px;
+  padding-right: 34px;
 }
