@@ -6,6 +6,8 @@
   --grey: #464646;
   --half-grey: #7E7E7E;
   --grey-light: #E5E5E5;
+  --grey-lightest: #EBEBEB;
+  --grey-dark: #D9D9D9;
   --white: #FFFFFF;
   /* Дополнительная палитра */
   --yellow: #F7E296;
@@ -88,7 +90,6 @@ img {
   /* identical to box height */
   letter-spacing: 0.1em;
   text-transform: uppercase;
-
 }
 
 .site-navigation,
@@ -429,3 +430,155 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   padding-left: 34px;
   padding-right: 34px;
 }
+
+/* Страница каталога */
+.inner-page {
+  color: var(--black);
+}
+
+.heading {
+  font-family: Gilroy, Arial, sans-serif;
+  font-weight: 800;
+}
+
+.main-heading {
+  font-size: 47px;
+  line-height: 58px;
+}
+
+.breadcrumbs {
+  list-style: none;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.breadcrumbs a {
+  color: var(--black);
+  opacity: 0.3;
+}
+
+.breadcrumbs a:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs a:active {
+  opacity: 0.1;
+}
+
+/* Сортировка */
+.sort-wrapper {
+  background-color: var(--grey-light);
+}
+
+.sort-heading {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.sort-list,
+.sort-arrows {
+  list-style: none;
+}
+
+.sort-list a {
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--black);
+  opacity: 0.3;
+}
+
+.sort-list a:hover {
+  opacity: 0.6;
+}
+
+.sort-list a:active,
+.sort-list a:focus {
+  opacity: 1;
+  pointer-events: none;
+}
+
+.product-list {
+  list-style: none;
+}
+
+.product-list .heading {
+  color: var(--black);
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+}
+
+.price {
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+}
+
+.product-list .button {
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+.compare-button {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  color: var(--black);
+  opacity: 0.5;
+}
+
+.compare-button:hover {
+  opacity: 1;
+}
+
+.compare-button:active {
+  opacity: 0.2;
+}
+
+.pagination-wrapper {
+  background-color: var(--grey-lightest);
+}
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-button {
+  font-family: Gilroy;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  outline: 0;
+  background-color: var(--grey-lightest);
+  padding: 25px 26px;
+  color: var(--black);
+}
+
+.pagination-button:hover {
+  background-color: var(--grey-dark);
+}
+
+.pagination-button:active {
+  color: rgba(0, 0, 0, 0.3);/* Допустимо ли по критериям Академии здесь указать цвет не через var, а через rgba для прозрачности? */
+}
+
+.pagination-list .pagination-button {
+  color: var(--black);
+  padding: 5px;
+  opacity: 0.3;
+}
+
+.pagination-list .pagination-button:hover {
+  opacity: 0.6;
+}
+
+.pagination-list .pagination-button:active,
+.pagination-list .pagination-button:focus {
+  opacity: 1;
+}
+
