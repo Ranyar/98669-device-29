@@ -12,7 +12,7 @@
        <input type="search" placeholder="Поиск по сайту">
       <ul class="header-links">
         <li><a href="#">Валентин Петухов</a></li>
-        <li><a href="#">Выйти</a></li>
+        <li><a class="logout-button" href="#">Выйти</a></li>
         <li><a href="#">Сравнить</a></li>
         <li><a href="#">Корзина</a></li>
       </ul>
@@ -34,7 +34,7 @@
       <ul class="breadcrumbs">
         <li><a href="">Главная</a></li>
         <li><a href="">Каталог товаров</a></li>
-        <li><a>Моноподы для селфи</a></li><!-- В хлебных крошках текущая страница некликабельна -->
+        <li><a class="breadcrumbs-active">Моноподы для селфи</a></li><!-- В хлебных крошках текущая страница некликабельна -->
       </ul>
       <section>
         <h2>Фильтр товаров</h2>
@@ -47,7 +47,7 @@
         <div class="sort-wrapper">
         <p class="heading sort-heading">Сортировка:</p>
           <ul class="sort-list">
-            <li><a href="#">По цене</a></li>
+            <li><a class="sort-active">По цене</a></li>
             <li><a href="#">По типу</a></li>
             <li><a href="#">По популярности</a></li>
           </ul>
@@ -68,7 +68,7 @@
           <li>
             <img src="https://via.placeholder.com/360x380" width="360" height="380" alt="Любительская селфи-палка">
               <p class=""><!-- Нужно ли оборачивать a в p??? -->
-                <a class="heading" href="#">Любительская селфи-палка</a>
+                <a class="heading product-heading" href="#">Любительская селфи-палка</a>
               </p>
             <p class="price">500 руб.</p>
             <!-- Кнопки, появляющиеся при наведении на карточку товара. Возможно, стоит их сделать мини-списком? -->
@@ -78,7 +78,7 @@
           <li>
             <img src="https://via.placeholder.com/360x380" width="360" height="380" alt="Профессиональная селфи-палка">
               <p>
-                <a class="heading" href="#">Профессиональная селфи-палка</a>
+                <a class="heading product-heading" href="#">Профессиональная селфи-палка</a>
               </p>
             <p class="price">1500 руб.</p>
             <!-- Кнопки, появляющиеся при наведении на карточку товара. Возможно, стоит их сделать мини-списком? -->
@@ -88,7 +88,7 @@
           <li>
             <img src="https://via.placeholder.com/360x380" width="360" height="380" alt="Непотопляемая селфи-палка">
               <p>
-                <a class="heading" href="#">Непотопляемая селфи-палка</a>
+                <a class="heading product-heading" href="#">Непотопляемая селфи-палка</a>
               </p>
             <p class="price">2500 руб.</p>
             <!-- Кнопки, появляющиеся при наведении на карточку товара. Возможно, стоит их сделать мини-списком? -->
@@ -98,7 +98,7 @@
           <li>
             <img src="https://via.placeholder.com/360x380" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
               <p>
-                <a class="heading" href="#">Селфи-палка «Следуй за мной»</a>
+                <a class="heading product-heading" href="#">Селфи-палка «Следуй за мной»</a>
               </p>
             <p class="price">4900 руб.</p>
             <!-- Кнопки, появляющиеся при наведении на карточку товара. Возможно, стоит их сделать мини-списком? -->
@@ -107,11 +107,11 @@
           </li>
         </ul>
         <div class="pagination-wrapper">
-          <button class="pagination-button" type="button" disabled>Назад</button><!-- Мы находимся на первой странице пагинации, поэтому кнопка некликабельна -->
+          <button class="pagination-button numbers-active" type="button" disabled>Назад</button><!-- Мы находимся на первой странице пагинации, поэтому кнопка некликабельна -->
           <ul class="pagination-list">
-            <li><a class="pagination-button">1</a></li><!-- Пункт пагинации на текущей странице некликабелен -->
-            <li><a class="pagination-button" href="#">2</a></li>
-            <li><a class="pagination-button" href="#">3</a></li>
+            <li><a class="pagination-button numbers numbers-active">1</a></li><!-- Пункт пагинации на текущей странице некликабелен -->
+            <li><a class="pagination-button numbers" href="#">2</a></li>
+            <li><a class="pagination-button numbers" href="#">3</a></li>
           </ul>
           <button class="pagination-button" type="button">Вперед</button>
         </div>

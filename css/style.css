@@ -14,6 +14,7 @@
   --yellow-dark: #F0C52E;
   --yellow-light: #F7E296;
   --green: #91C92F;
+  --transparent-black: rgba(0, 0, 0, 0.3);
   /* Статус */
   --status: #F6DADA;
 }
@@ -432,10 +433,6 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 }
 
 /* Страница каталога */
-.inner-page {
-  color: var(--black);
-}
-
 .heading {
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
@@ -444,6 +441,10 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 .main-heading {
   font-size: 47px;
   line-height: 58px;
+}
+
+.header-links .logout-button {
+  color: var(--transparent-black);
 }
 
 .breadcrumbs {
@@ -463,6 +464,11 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 
 .breadcrumbs a:active {
   opacity: 0.1;
+}
+
+.breadcrumbs .breadcrumbs-active:hover,
+.breadcrumbs .breadcrumbs-active:active {
+  opacity: 0.3;
 }
 
 /* Сортировка */
@@ -488,21 +494,27 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   opacity: 0.3;
 }
 
-.sort-list a:hover {
+.sort-list a:hover,
+.sort-list a:focus {
   opacity: 0.6;
 }
 
-.sort-list a:active,
-.sort-list a:focus {
+.sort-list a:active {
   opacity: 1;
   pointer-events: none;
+}
+
+.sort-list .sort-active,
+.sort-list .sort-active:hover,
+.sort-list .sort-active:active {
+  opacity: 1;
 }
 
 .product-list {
   list-style: none;
 }
 
-.product-list .heading {
+.product-heading {
   color: var(--black);
   font-size: 18px;
   line-height: 22px;
@@ -546,7 +558,7 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 }
 
 .pagination-button {
-  font-family: Gilroy;
+  font-family: Gilroy, Arial, sans-serif;;
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
@@ -564,21 +576,33 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 }
 
 .pagination-button:active {
-  color: rgba(0, 0, 0, 0.3);/* Допустимо ли по критериям Академии здесь указать цвет не через var, а через rgba для прозрачности? */
+  color: var(--transparent-black);
 }
 
-.pagination-list .pagination-button {
+.pagination-button.numbers {
   color: var(--black);
   padding: 5px;
   opacity: 0.3;
 }
 
-.pagination-list .pagination-button:hover {
+.pagination-button.numbers:hover,
+.pagination-button.numbers:focus {
   opacity: 0.6;
 }
 
-.pagination-list .pagination-button:active,
-.pagination-list .pagination-button:focus {
+.pagination-button.numbers:active {
   opacity: 1;
 }
 
+.numbers.numbers-active,
+.numbers.numbers-active:hover,
+.numbers.numbers-active:focus,
+.numbers.numbers-active:active {
+  opacity: 1;
+  background: none;
+  color: var(--black);
+}
+
+.pagination-button.numbers-active:hover {
+  background: none;
+}
