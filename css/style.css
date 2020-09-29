@@ -121,6 +121,11 @@ img {
   opacity: 0.3;
 }
 
+.logo-active:hover,
+.logo-active:active {
+  opacity: 1;
+}
+
 .header-links {
   line-height: 20px;
 }
