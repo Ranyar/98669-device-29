@@ -113,6 +113,14 @@ img {
   opacity: 0.3;
 }
 
+.logo:hover {
+  opacity: 0.6;
+}
+
+.logo:active {
+  opacity: 0.3;
+}
+
 .header-links {
   line-height: 20px;
 }
@@ -288,9 +296,16 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 }
 */
 
-
 .partners-list {
   list-style: none;
+}
+
+.partners-list-item {
+  filter: grayscale(100%) opacity(20%);
+}
+
+.partners-list-item:hover {
+  filter: none;
 }
 
 /* Потом назначу гриды
