@@ -9,16 +9,17 @@
   <body class="page-body">
     <!-- Хедер, который показывается неавторизованному пользователю -->
     <header class="main-header">
-       <input type="search" placeholder="Поиск по сайту">
+      <a class="main-header-logo"> <!-- Вынес логотип из nav, чтобы удобнее было строить сетку -->
+          <img class="logo logo-active" src="img/logo.svg" width="163" height="35" alt="Логотип DEVICE">
+      </a>
+      <input class="search" type="search" placeholder="Поиск по сайту">
       <ul class="header-links">
-        <li><a class="login-link" href="#">Войти</a></li>
-        <li><a class="compare-link" href="#">Сравнить</a></li>
-        <li><a class="cart-link" href="#">Корзина</a></li>
+          <li><a class="login-link" href="#">Войти</a></li>
+          <li><a class="compare-link" href="#">Сравнить</a></li>
+          <li><a class="cart-link" href="#">Корзина</a></li>
       </ul>
       <nav class="main-navigation">
-        <a class="main-header-logo">
-          <img class="logo logo-active" src="img/logo.svg" width="163" height="35" alt="Логотип DEVICE">
-        </a>
+
         <ul class="site-navigation">
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="#">Доставка</a></li>
@@ -29,36 +30,48 @@
       <!-- Там еще был элемент оформления, белый прямоугольник, реализованный средствами CSS, его пока не вставляю, если в этом задании только разметку делаем без стилизации. Наверное, это будет <span></span> -->
     </header>
 
-    <main class="wrapper">
-      <h1>Интернет-магазин DEVICE</h1>
+    <main class="main-wrapper">
+      <h1 class="visually-hidden">Интернет-магазин DEVICE</h1>
       <div class="featured-products">
-        <h2>Популярные товары</h2>
-          <!-- Кнопки переключения слайдов. С помощью JS реализовал бы смену слайдов по событию onclick,
-          а как сделать средствами CSS - пока не думал -->
-          <ul class="slider-buttons">
-            <li><button type="button"></button></li>
-            <li><button type="button"></button></li>
-            <li><button type="button"></button></li>
-          </ul>
+        <h2 class="visually-hidden">Популярные товары</h2>
         <!-- Слайд №1 -->
         <section class="slider slide-1">
-          <h3>Делай селфи, как Бен Стиллер!</h3>
+
           <a href="#">
             <img src="img/slider-1.png" width="384" height="486" alt="Фото моноподов для селфи">
           </a>
-          <p>Самая длинная палка для селфи доступна в нашем магазине.
-          Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-          <dl class="slider-def">
-            <dt>Длина палки</dt>
-              <dd>8,5 м</dd>
-            <dt>Вес палки</dt>
-              <dd>5 кг</dd>
-            <dt>Материал</dt>
-              <dd>Карбон</dd>
-          </dl>
-          <a class="button" href="#">Подробнее</a>
+          <div class="slider-info-wrapper">
+            <h3>Делай селфи, как Бен Стиллер!</h3>
+            <p>Самая длинная палка для селфи доступна в нашем магазине.
+            Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+            <div class="slider-buttons-wrapper">
+              <a class="button" href="#">Подробнее</a>
+              <!-- Кнопки переключения слайдов. С помощью JS реализовал бы смену слайдов по событию onclick,
+              а как сделать средствами CSS - пока не думал -->
+              <ul class="slider-buttons">
+                <li><button type="button"></button></li>
+                <li><button type="button"></button></li>
+                <li><button type="button"></button></li>
+              </ul>
+            </div>
+            <dl class="slider-def">
+              <div class="slider-def-wrapper">
+                <dt>Длина палки</dt>
+                  <dd>8,5 м</dd>
+              </div>
+              <div class="slider-def-wrapper">
+                <dt>Вес палки</dt>
+                  <dd>5 кг</dd>
+              </div>
+              <div class="slider-def-wrapper">
+                <dt>Материал</dt>
+                  <dd>Карбон</dd>
+              </div>
+            </dl>
+          </div>
         </section>
-        <!-- Слайд №2 -->
+        <!-- Слайд №2/ Этот и последующие слайды пока замоментирую для удобства построения сетки -->
+        <!--
         <section class="slider slide-2">
           <h3>Худеем правильно!</h3>
           <a href="#">
@@ -72,7 +85,9 @@
           </dl>
           <a class="button" href="#">Подробнее</a>
         </section>
-         <!-- Слайд №3 -->
+        -->
+        <!-- Слайд №3 -->
+        <!--
         <section class="slider slide-3">
           <h3>Порхает как бабочка, жалит как пчела!</h3>
           <a href="#">
@@ -88,9 +103,10 @@
           </dl>
           <a class="button" href="#">Подробнее</a>
         </section>
+        -->
       </div>
       <section class="popular">
-        <h2>Популярные товарные категории</h2>
+        <h2 class="visually-hidden">Популярные товарные категории</h2>
         <!-- Во всех пунктах нижеследующего списка иконку можно разметить как img, но это скорее не контентное изображение,
         а "фоновая иконка", и можно оформить как CSS background-image у заголовка. Как лучше? Каждый отдельный блок будет кликабелен -->
         <ul class="popular-list">
@@ -115,39 +131,43 @@
         </ul>
       </section>
       <section class="services">
-        <h2>Сервисы</h2>
-          <ul class="services-list">
-            <li class="services-list-item"><button class="button services-button" type="button">Доставка</button></li>
-            <li class="services-list-item"><button class="button services-button" type="button">Гарантия</button></li>
-            <li class="services-list-item"><button class="button services-button" type="button">Кредит</button></li>
-          </ul>
-          <!-- Первый слайд -->
-          <div class="delivery">
-            <h3>Доставка</h3>
-            <p class="delivery-description">Мы с удовольствием доставим ваш товар прямо к вашему
-            подъезду совершенно бесплатно! Ведь мы неплохо
-            заработаем, поднимая его на ваш этаж.</p>
-            <!-- Фоновая иконка будет, вероятно, background-image -->
-          </div>
-          <!-- Второй слайд -->
-          <div class="warranty">
-            <h3>Гарантия</h3>
-            <p class="warranty-description">Если из-за возгорания купленного у нас товара у вас сгорит дом —
-            не переживайте, мы выдадим вам новый.
-            Товар, не дом, конечно же.</p>
-            <!-- Фоновая иконка будет, вероятно, background-image -->
-          </div>
-          <!-- Третий слайд -->
-          <div class="loan">
-            <h3>Кредит</h3>
-            <p class="loan-description">Залезть в долговую яму стало проще! Кредитные консультанты
-            подберут для вас наиболее выгодные
-            условия кредита. Выгодные для нашего банка, разумеется.</p>
-            <!-- Фоновая иконка будет, вероятно, background-image -->
+        <h2 class="visually-hidden">Сервисы</h2>
+          <div class="services-wrapper">
+            <ul class="services-list">
+              <li class="services-list-item"><button class="button services-button" type="button">Доставка</button></li>
+              <li class="services-list-item"><button class="button services-button" type="button">Гарантия</button></li>
+              <li class="services-list-item"><button class="button services-button" type="button">Кредит</button></li>
+            </ul>
+            <!-- Первый слайд -->
+            <div class="delivery">
+              <h3 class="delivery-heading">Доставка</h3>
+              <p class="delivery-description">Мы с удовольствием доставим ваш товар прямо к вашему
+              подъезду совершенно бесплатно! Ведь мы неплохо
+              заработаем, поднимая его на ваш этаж.</p>
+              <!-- Фоновая иконка будет, вероятно, background-image -->
+            </div>
+            <!-- Второй слайд -->
+            <!-- Этот и последующие слайды закомментирую на время построения сетки
+            <div class="warranty">
+              <h3>Гарантия</h3>
+              <p class="warranty-description">Если из-за возгорания купленного у нас товара у вас сгорит дом —
+              не переживайте, мы выдадим вам новый.
+              Товар, не дом, конечно же.</p>
+            </div>
+             -->
+            <!-- Третий слайд -->
+            <!--
+            <div class="loan">
+              <h3>Кредит</h3>
+              <p class="loan-description">Залезть в долговую яму стало проще! Кредитные консультанты
+              подберут для вас наиболее выгодные
+              условия кредита. Выгодные для нашего банка, разумеется.</p>
+            </div>
+            -->
           </div>
       </section>
       <section class="partners">
-        <h2>Логотипы партнеров</h2>
+        <h2 class="visually-hidden">Логотипы партнеров</h2>
         <ul class="partners-list">
           <li class="partners-list-item">
             <a href="#"><img src="img/partner-logo-1-color.png" width="260" height="100" alt="Логотип DJI"></a>
@@ -199,49 +219,53 @@
 
     <!-- Футер, который показывается неавторизованному пользователю -->
     <footer class="page-footer">
-      <ul class="footer-links">
-        <li><a class="login-link" href="#">Войти</a></li>
-        <li><a class="compare-link" href="#">Сравнить</a></li>
-        <li><a class="cart-link" href="#">Корзина</a></li>
-      </ul>
-      <address class="address">г. Москва, ул. Строителей, 15</address>
-      <nav class="footer-navigation">
-        <a class="page-footer-logo">
+      <div class="footer-wrapper">
+        <ul class="footer-links">
+          <li><a class="login-link" href="#">Войти</a></li>
+          <li><a class="compare-link" href="#">Сравнить</a></li>
+          <li><a class="cart-link" href="#">Корзина</a></li>
+        </ul>
+        <address class="address">г. Москва, ул. Строителей, 15</address>
+        <a class="page-footer-logo"><!-- Вынес логотип из nav, чтобы удобнее было строить сетку -->
           <img class="logo logo-active" src="img/logo-footer.svg" width="163" height="35" alt="Логотип интернет-магазина Device">
         </a>
-        <ul class="navigation-list">
-          <li class="navigation-list-item"><a href="#">Доставка</a></li>
-          <li class="navigation-list-item"><a href="#">Гарантия</a></li>
-          <li class="navigation-list-item"><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
-      <p>Тел.: <a class="phone" href="tel:+74954959595">+7 (495) 495-95-95</a></p>
-      <section class="footer-social">
-        <h2>Профили в соц. сетях</h2>
-        <ul class="social-list">
-          <li class="social-list-item"><a class="social-button" href="#">Facebook</a></li>
-          <li class="social-list-item"><a class="social-button" href="#">Instagram</a></li>
-          <li class="social-list-item"><a class="social-button" href="#">Twitter</a></li>
-        </ul>
-      </section>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">
-        <!-- Изначально в макете ширина логотипа была дробная (26.94), но валидатор выдал ошибку и я
-        поставил целое число, т.к. оно в пределах допуска и разница не влияет на внешний вид -->
-        <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML Academy">
-      </a>
+        <nav class="footer-navigation">
+          <ul class="navigation-list">
+            <li class="navigation-list-item"><a href="#">Доставка</a></li>
+            <li class="navigation-list-item"><a href="#">Гарантия</a></li>
+            <li class="navigation-list-item"><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+          <div class="phone-wrapper">
+            <p>Тел.: <a class="phone" href="tel:+74954959595">+7 (495) 495-95-95</a></p>
+          </div>
+        <section class="footer-social">
+          <h2 class="visually-hidden">Профили в соц. сетях</h2>
+          <ul class="social-list">
+            <li class="social-list-item"><a class="social-button" href="#">Facebook</a></li>
+            <li class="social-list-item"><a class="social-button" href="#">Instagram</a></li>
+            <li class="social-list-item"><a class="social-button" href="#">Twitter</a></li>
+          </ul>
+        </section>
+        <a class="footer-academy-link" href="https://htmlacademy.ru/intensive/htmlcss">
+          <!-- Изначально в макете ширина логотипа была дробная (26.94), но валидатор выдал ошибку и я
+          поставил целое число, т.к. оно в пределах допуска и разница не влияет на внешний вид -->
+          <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML Academy">
+        </a>
+      </div>
       <!-- Там еще был элемент оформления, оранжевый прямоугольник, реализованный средствами CSS, его пока не вставляю, если в этом задании только разметку делаем без стилизации. Наверное, это будет <span></span> -->
     </footer>
-    <!-- Модальное окно с формой обратной связи "Напишите нам" -->
+    <!-- Пока делаю сетку, закомментирую модальные окна/
+    Модальное окно с формой обратной связи "Напишите нам"
     <section class="modal modal-write-us">
       <h2>Напишите нам</h2>
-      <!-- Здесь будет сама форма -->
+      Здесь будет сама форма
       <button class="button modal-button" type="button">Отправить</button>
       <button class="modal-close" type="button"></button>
     </section>
-    <!-- Модальное окно "Карта проезда" -->
+    Модальное окно "Карта проезда"
     <section class="modal modal-map">
       <h2>Карта проезда</h2>
-      <!-- Здесь будет сама форма. Нужна ли кнопка "закрыть", если ее нет в макете? -->
-    </section>
+    </section> -->
   </body>
 </html>

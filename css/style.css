@@ -137,6 +137,14 @@ img {
 }
 */
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 .slider-buttons {
   list-style: none;
 }
@@ -234,7 +242,6 @@ img {
 
 /* Сервисы */
 .services {
-  margin: 0 auto;
   background-color: var(--grey-light);
 }
 
@@ -312,13 +319,6 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 .partners-list-item:hover {
   filter: none;
 }
-
-/* Потом назначу гриды
-.double-block {
-  width: 1140;
-  margin: 0 auto;
-}
-*/
 
 /* О нас */
 
@@ -443,6 +443,10 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 
 .social-list {
   list-style: none;
+}
+
+.social-list a {
+  color: var(--white);
 }
 
 /* Модальные окна */
@@ -625,4 +629,234 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 
 .pagination-button.numbers-active:hover {
   background: none;
+}
+
+/* Grid */
+.page {
+  height: 100%; /* чтобы при нехватке контента подвал прижимался к нижней части страницы. */
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+.body-wrapper {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.main-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 145px;
+  width: 1160px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.header-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 2 / 3;
+  margin-left: 0;
+}
+
+.main-header-logo {
+  grid-column: 1 / 3;
+}
+
+.search {
+  grid-column: 1 / 2;
+  width: 144px;
+  height: 20px;
+  margin-left: 60px;
+  align-self: center;
+  border: none;
+  background-color: var(--yellow);
+}
+
+.main-navigation {
+  grid-column: 1 / 3;
+}
+
+.site-navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.site-navigation li:first-child {
+  grid-column: 1 / 2;
+  margin-left: 20px;
+}
+
+.site-navigation li:nth-child(2) {
+  margin-left: 335px;
+}
+
+.site-navigation li:nth-child(3) {
+  margin-left: 38px;
+}
+
+.site-navigation li:nth-child(4) {
+  margin-left: 20px;
+}
+
+.main-header-logo {
+  margin-left: 60px;
+  bottom: 20px;
+  position: relative;
+}
+
+.slider {
+  width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.slider a {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.slider h3,
+.slider p,
+.slider-def,
+.slider .button,
+.slider-buttons {
+  grid-column: 2 / 3;
+}
+
+.slider-def {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.slider-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.slider-buttons-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.slider-buttons-wrapper .button {
+  grid-column: 1 / 2;
+  width: 220px;
+  height: 40px;
+}
+
+.popular {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.popular-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.services-wrapper {
+  width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 277px 1fr;
+}
+
+.services-list {
+  padding-left: 0;
+}
+
+.partners {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.partners-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.double-block {
+  width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contacts {
+  align-self: end;
+}
+
+.footer-wrapper {
+  width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.page-footer-logo {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  margin-top: 64px;
+}
+
+.footer-links {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 46px;
+}
+
+.address {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  align-self: center;
+}
+
+.footer-navigation {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  align-self: center;
+}
+
+.navigation-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.navigation-list li {
+  margin-left: 18px;
+  margin-right: 18px;
+}
+
+.phone-wrapper {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  align-self: center;
+  text-align: right;
+}
+
+.footer-social {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.footer-academy-link {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+  text-align: right;
+}
+
+.social-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
