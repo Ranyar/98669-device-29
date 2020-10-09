@@ -8,7 +8,7 @@
   </head>
   <body class="page-body">
     <!-- Хедер, который показывается неавторизованному пользователю -->
-    <header class="main-header">
+    <header class="main-header container">
       <a class="main-header-logo"> <!-- Вынес логотип из nav, чтобы удобнее было строить сетку -->
           <img class="logo logo-active" src="img/logo.svg" width="163" height="35" alt="Логотип DEVICE">
       </a>
@@ -19,9 +19,8 @@
           <li><a class="cart-link" href="#">Корзина</a></li>
       </ul>
       <nav class="main-navigation">
-
         <ul class="site-navigation">
-          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="catalog.html">Каталог товаров</a></li>
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Гарантия</a></li>
           <li><a href="#">Контакты</a></li>
@@ -35,16 +34,12 @@
       <div class="featured-products">
         <h2 class="visually-hidden">Популярные товары</h2>
         <!-- Слайд №1 -->
-        <section class="slider slide-1">
-
-          <a href="#">
-            <img src="img/slider-1.png" width="384" height="486" alt="Фото моноподов для селфи">
-          </a>
+        <section class="slider slide-1 container">
+          <img src="img/slider-1.png" width="384" height="486" alt="Фото моноподов для селфи">
           <div class="slider-info-wrapper">
             <h3>Делай селфи, как Бен Стиллер!</h3>
             <p>Самая длинная палка для селфи доступна в нашем магазине.
             Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-            <div class="slider-buttons-wrapper">
               <a class="button" href="#">Подробнее</a>
               <!-- Кнопки переключения слайдов. С помощью JS реализовал бы смену слайдов по событию onclick,
               а как сделать средствами CSS - пока не думал -->
@@ -53,59 +48,54 @@
                 <li><button type="button"></button></li>
                 <li><button type="button"></button></li>
               </ul>
-            </div>
             <dl class="slider-def">
               <div class="slider-def-wrapper">
                 <dt>Длина палки</dt>
-                  <dd>8,5 м</dd>
+                <dd>8,5 м</dd>
               </div>
               <div class="slider-def-wrapper">
                 <dt>Вес палки</dt>
-                  <dd>5 кг</dd>
+                <dd>5 кг</dd>
               </div>
               <div class="slider-def-wrapper">
                 <dt>Материал</dt>
-                  <dd>Карбон</dd>
+                <dd>Карбон</dd>
               </div>
             </dl>
           </div>
         </section>
         <!-- Слайд №2/ Этот и последующие слайды пока замоментирую для удобства построения сетки -->
         <!--
-        <section class="slider slide-2">
+        <section class="slider slide-2 container">
           <h3>Худеем правильно!</h3>
-          <a href="#">
-            <img src="img/slider-2.png" width="345" height="485" alt="Фото фитнес-браслета">
-          </a>
+          <img src="img/slider-2.png" width="345" height="485" alt="Фото фитнес-браслета">
           <p>Мотивирующие фитнес-браслеты помогут найти в себе силы
           не пропускать занятия и соблюдать диету.</p>
           <dl class="slider-def">
             <dt>Без подзарядки</dt>
-              <dd>48 часов</dd>
+            <dd>48 часов</dd>
           </dl>
           <a class="button" href="#">Подробнее</a>
         </section>
         -->
         <!-- Слайд №3 -->
         <!--
-        <section class="slider slide-3">
+        <section class="slider slide-3 container">
           <h3>Порхает как бабочка, жалит как пчела!</h3>
-          <a href="#">
-            <img src="img/slider-3.png" width="526" height="334" alt="Фото дрона">
-          </a>
+          <img src="img/slider-3.png" width="526" height="334" alt="Фото дрона">
           <p>Этот обычный, на первый взгляд, квадрокоптер оснащен
           мощным лазером, замаскированным под стандартную камеру.</p>
           <dl class="slider-def">
             <dt>Дальность полета</dt>
-              <dd>800 м</dd>
+            <dd>800 м</dd>
             <dt>Радиус поражения</dt>
-              <dd>50 м</dd>
+            <dd>50 м</dd>
           </dl>
           <a class="button" href="#">Подробнее</a>
         </section>
         -->
       </div>
-      <section class="popular">
+      <section class="popular container">
         <h2 class="visually-hidden">Популярные товарные категории</h2>
         <!-- Во всех пунктах нижеследующего списка иконку можно разметить как img, но это скорее не контентное изображение,
         а "фоновая иконка", и можно оформить как CSS background-image у заголовка. Как лучше? Каждый отдельный блок будет кликабелен -->
@@ -132,7 +122,7 @@
       </section>
       <section class="services">
         <h2 class="visually-hidden">Сервисы</h2>
-          <div class="services-wrapper">
+          <div class="services-wrapper container">
             <ul class="services-list">
               <li class="services-list-item"><button class="button services-button" type="button">Доставка</button></li>
               <li class="services-list-item"><button class="button services-button" type="button">Гарантия</button></li>
@@ -166,7 +156,7 @@
             -->
           </div>
       </section>
-      <section class="partners">
+      <section class="partners container">
         <h2 class="visually-hidden">Логотипы партнеров</h2>
         <ul class="partners-list">
           <li class="partners-list-item">
@@ -183,7 +173,7 @@
           </li>
         </ul>
       </section>
-      <div class="double-block"><!-- Два нижеописанных section на макете как бы в одном блоке, поэтому обернул в общий div-->
+      <div class="double-block container"><!-- Два нижеописанных section на макете как бы в одном блоке, поэтому обернул в общий div-->
         <section class="about">
           <!-- Декоративный ректангл, возможно, span+CSS -->
           <h2>О нас</h2>
@@ -219,7 +209,7 @@
 
     <!-- Футер, который показывается неавторизованному пользователю -->
     <footer class="page-footer">
-      <div class="footer-wrapper">
+      <div class="footer-wrapper container">
         <ul class="footer-links">
           <li><a class="login-link" href="#">Войти</a></li>
           <li><a class="compare-link" href="#">Сравнить</a></li>
