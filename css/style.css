@@ -99,6 +99,10 @@ img {
   text-transform: uppercase;
 }
 
+.site-navigation {
+  padding: 0;
+}
+
 .site-navigation,
 .header-links {
   list-style: none;
@@ -817,4 +821,67 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 .social-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+
+/* Сетка страницы каталога */
+
+.header-links-inner {
+  display: grid;
+  grid-template-columns: 35% 15% 25% 25%;
+  grid-column: 2 / 3;
+  list-style: none;
+}
+
+.top-wrapper.container {
+  width: 1044px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.breadcrumbs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 50%;
+  grid-template-areas:
+  'first second third .';
+  padding-left: 0px;
+}
+
+.breadcrumb-first {
+  grid-area: first;
+}
+
+.breadcrumb-second {
+  grid-area: second;
+}
+
+.breadcrumb-third {
+  grid-area: third;
+}
+
+.inner-page .footer-links {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /*margin-top: 46px;*/
+}
+
+.section-wrapper {
+  display: grid;
+  grid-template-columns: 238px auto;
+}
+
+.sort-wrapper {
+  display: grid;
+  grid-template-columns: 20% 70% 10%;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.pagination-wrapper {
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
 }
