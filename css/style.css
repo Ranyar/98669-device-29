@@ -7,6 +7,7 @@
   --half-grey: #7E7E7E;
   --grey-light: #E5E5E5;
   --grey-lightest: #EBEBEB;
+  --grey-medium: #DCDCDC;
   --grey-dark: #D9D9D9;
   --white: #FFFFFF;
   /* Дополнительная палитра */
@@ -838,26 +839,6 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   padding-right: 60px;
 }
 
-.breadcrumbs {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 50%;
-  grid-template-areas:
-  'first second third .';
-  padding-left: 0px;
-}
-
-.breadcrumb-first {
-  grid-area: first;
-}
-
-.breadcrumb-second {
-  grid-area: second;
-}
-
-.breadcrumb-third {
-  grid-area: third;
-}
-
 .inner-page .footer-links {
   grid-column: 2 / 4;
   grid-row: 1 / 2;
@@ -869,6 +850,14 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 .section-wrapper {
   display: grid;
   grid-template-columns: 238px auto;
+}
+
+.filters {
+  background-color: var(--grey-light);
+}
+
+.filters-heading-wrapper {
+  background-color: var(--grey-medium);
 }
 
 .sort-wrapper {

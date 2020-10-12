@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page-body inner-page">
+  <body class="page-body">
     <!-- Хедер, который показывается авторизованному пользователю -->
     <header class="main-header container">
       <a class="main-header-logo" href="index.html">
@@ -28,20 +28,22 @@
         </ul>
       </nav>
     </header>
-    <main class="wrapper container inner-page">
+    <main class="wrapper container">
       <div class="top-wrapper container">
         <h1 class="heading main-heading">Моноподы для селфи</h1>
         <ul class="breadcrumbs">
-          <li class="breadcrumb-first"><a href="">Главная</a></li>
-          <li class="breadcrumb-second"><a href="">Каталог товаров</a></li>
-          <li class="breadcrumb-third"><a class="breadcrumbs-active">Моноподы для селфи</a></li><!-- В хлебных крошках текущая страница некликабельна -->
+          <li class="breadcrumb-item"><a href="">Главная</a></li>
+          <li class="breadcrumb-item"><a href="">Каталог товаров</a></li>
+          <li class="breadcrumb-item"><a class="breadcrumbs-active">Моноподы для селфи</a></li><!-- В хлебных крошках текущая страница некликабельна -->
         </ul>
       </div>
       <div class="section-wrapper">
-        <section>
-          <h2 class="visually-hidden">Фильтр товаров</h2>
-          <p class="heading sort-heading">Фильтр:</p>
-          <!-- Здесь будет форма фильтра товаров с фоном -->
+        <section class="filters">
+          <div class="filters-heading-wrapper">
+            <h2 class="visually-hidden">Фильтр товаров</h2>
+            <p class="heading sort-heading">Фильтр:</p>
+            <!-- Здесь будет форма фильтра товаров с фоном -->
+          </div>
         </section>
         <section>
           <h2 class="visually-hidden">Список моноподов для селфи</h2>
@@ -68,9 +70,7 @@
           <ul class="product-list">
             <li>
               <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-                <p class=""><!-- Нужно ли оборачивать a в p??? -->
-                  <a class="heading product-heading" href="#">Любительская селфи-палка</a>
-                </p>
+              <a class="heading product-heading" href="#">Любительская селфи-палка</a><!-- Раньше было обернуто в p -->
               <p class="price">500 руб.</p>
               <!-- Кнопки, появляющиеся при наведении на карточку товара. Возможно, стоит их сделать мини-списком? -->
               <a class="button" href="#">В корзину</a>
@@ -78,9 +78,7 @@
             </li>
             <li>
               <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-                <p>
-                  <a class="heading product-heading" href="#">Профессиональная селфи-палка</a>
-                </p>
+              <a class="heading product-heading" href="#">Профессиональная селфи-палка</a><!-- Раньше было обернуто в p -->
               <p class="price">1500 руб.</p>
               <!-- Кнопки, появляющиеся при наведении на карточку товара. Возможно, стоит их сделать мини-списком? -->
               <a class="button" href="#">В корзину</a>
@@ -88,9 +86,7 @@
             </li>
             <li>
               <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-                <p>
-                  <a class="heading product-heading" href="#">Непотопляемая селфи-палка</a>
-                </p>
+              <a class="heading product-heading" href="#">Непотопляемая селфи-палка</a><!-- Раньше было обернуто в p -->
               <p class="price">2500 руб.</p>
               <!-- Кнопки, появляющиеся при наведении на карточку товара. Возможно, стоит их сделать мини-списком? -->
               <a class="button" href="#">В корзину</a>
@@ -98,9 +94,7 @@
             </li>
             <li>
               <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-                <p>
-                  <a class="heading product-heading" href="#">Селфи-палка «Следуй за мной»</a>
-                </p>
+              <a class="heading product-heading" href="#">Селфи-палка «Следуй за мной»</a><!-- Раньше было обернуто в p -->
               <p class="price">4900 руб.</p>
               <!-- Кнопки, появляющиеся при наведении на карточку товара. Возможно, стоит их сделать мини-списком? -->
               <a class="button" href="#">В корзину</a>
