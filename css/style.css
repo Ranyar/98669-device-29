@@ -144,7 +144,7 @@ img {
 /* Слайдер */
 
 /* Потом назначу гриды
-.featured-products {
+  .featured-products {
 }
 */
 
@@ -156,8 +156,14 @@ img {
   margin: -1px;
 }
 
+.slider-buttons-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .slider-buttons {
   list-style: none;
+  display: flex;
 }
 
 .slider h3 {
@@ -219,7 +225,7 @@ img {
 /* Популярные категории товаров */
 
 /* Потом назначу гриды
-.popular {
+  .popular {
   width: 1140px;
   margin: 0 auto;
 }
@@ -313,13 +319,22 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 /* Логотипы партнеров */
 
 /* Потом назначу гриды
-.partners {
+  .partners {
   width: 1140px;
   margin: 0 auto;
 }
 */
 
+/* Здесь был мини-грид, но я решил заменить на флекс - вдруг будет больше логотипов и переполнение?
+  .partners-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+*/
+
 .partners-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
 
@@ -352,7 +367,6 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 
 /* Будем делать через псевдоэлементы, пока закрываю в коммент
 .logistics-list {
-
 }
 */
 
@@ -361,7 +375,7 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   font-weight: 800;
   font-size: 16px;
   line-height: 28px;
-/* or 175% */
+  /* or 175% */
   color: var(--black);
 }
 
@@ -456,6 +470,10 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   list-style: none;
 }
 
+.social-list-item {
+  margin: 0 10px;
+}
+
 .social-list a {
   color: var(--white);
 }
@@ -483,9 +501,16 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 }
 
 .breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   font-size: 14px;
   line-height: 19px;
+  padding: 0px;
+}
+
+.breadcrumb-item {
+  margin-right: 40px;
 }
 
 .breadcrumbs a {
@@ -517,9 +542,19 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   text-transform: uppercase;
 }
 
+
 .sort-list,
 .sort-arrows {
   list-style: none;
+  display: flex;
+}
+
+.sort-list {
+  flex-wrap: wrap;
+}
+
+.sort-list-item {
+  margin-right: 30px;
 }
 
 .sort-list a {
@@ -586,10 +621,15 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 
 .pagination-wrapper {
   background-color: var(--grey-lightest);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .pagination-list {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
 }
 
 .pagination-button {
@@ -667,11 +707,32 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   margin-top: 40px;
 }
 
+/* Здесь был мини-грид
 .header-links {
   display: grid;
   grid-template-columns: 50% 25% 25%;
   grid-column: 2 / 3;
   margin-left: 0;
+}
+*/
+
+.header-links {
+  display: flex;
+  flex-wrap: wrap; /* Защита от переполнения */
+  justify-content: flex-end;
+  padding: 0px;
+}
+
+.login-link {
+  margin-right: 239px;
+}
+
+.compare-link {
+  margin-left: auto;
+}
+
+.cart-link {
+  margin-left: 63px;
 }
 
 .main-header-logo {
@@ -691,9 +752,29 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   grid-column: 1 / 3;
 }
 
-.site-navigation {
+/* Тут была мини-сетка на гридах
+  .c-navigation {
   display: grid;
   grid-template-columns: 48% 15% 15% 22%;
+}
+*/
+
+.site-navigation {
+  display: flex;
+  flex-wrap: wrap; /* Защита от переполнения */
+}
+
+.site-navigation li:first-child {
+  width: 502px;
+}
+
+.site-navigation-item {
+  margin-right: 38px;
+}
+
+.site-navigation-item:last-child {
+  margin-left: auto;
+  margin-right: 0px;
 }
 
 .main-header-logo {
@@ -704,6 +785,7 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 .slider {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 38px;
 }
 
 .slider a {
@@ -716,14 +798,14 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 }
 
 /* Микросетка, ставит кнопки слайдера друг за другом
-.slider-buttons {
+  .slider-buttons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 */
 
 /*
-.slider-buttons-wrapper {
+  .slider-buttons-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -732,6 +814,7 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 .popular-list {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  column-gap: 40px;
 }
 
 .services-wrapper {
@@ -741,11 +824,6 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 
 .services-list {
   padding-left: 0;
-}
-
-.partners-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
 }
 
 .double-block {
@@ -774,9 +852,24 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 .footer-links {
   grid-column: 3 / 4;
   grid-row: 1 / 2;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px;
+  justify-content: flex-end;
+  /* display: grid;
   grid-template-columns: repeat(3, 1fr);
+  */
   /*margin-top: 46px;*/
+}
+
+.footer-links .login-link,
+.footer-links .compare-link {
+  margin-right: 38px;
+}
+
+.footer-links .cart-link {
+  margin-left: auto;
+  margin-right: 0px;
 }
 
 .address {
@@ -791,14 +884,32 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   align-self: center;
 }
 
-.navigation-list {
+/* Здесь был мини-грид
+  .navigation-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+*/
+
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 440px;
+  padding: 0px;
 }
 
 .navigation-list li {
   margin-left: 18px;
   margin-right: 18px;
+}
+
+.navigation-list-item:first-child {
+  margin-left: 0px;
+}
+
+.navigation-list-item:last-child {
+  margin-right: 0px;
 }
 
 .phone-wrapper {
@@ -819,18 +930,40 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   text-align: right;
 }
 
-.social-list {
+/* Здесь был мини-грид
+  .social-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+*/
+
+  .social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0px;
 }
 
 /* Сетка страницы каталога */
 
-.header-links-inner {
+/* Здесь был мини-грид
+  .header-links-inner {
   display: grid;
   grid-template-columns: 35% 15% 25% 25%;
   grid-column: 2 / 3;
   list-style: none;
+}
+*/
+
+.header-links-inner {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: 2 / 3;
+  list-style: none;
+}
+
+.username-link {
+  margin-right: 20px;
 }
 
 .top-wrapper.container {
@@ -842,9 +975,22 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 .inner-page .footer-links {
   grid-column: 2 / 4;
   grid-row: 1 / 2;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   /*margin-top: 46px;*/
+}
+
+.inner-page .username-link,
+.inner-page .logout-link,
+.inner-page .compare-link,
+.inner-page .cart-link {
+  margin-right: 25px;
+  margin-left: 0px;
+}
+
+.inner-page .cart-link {
+  margin-right: 0px;
 }
 
 .section-wrapper {
@@ -865,7 +1011,7 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 
 .sort-wrapper {
   display: grid;
-  grid-template-columns: 328px 1fr 1fr 1fr;
+  grid-template-columns: 328px 232px 1fr 60px;
 }
 
 .product-list {
