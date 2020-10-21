@@ -105,22 +105,26 @@ img {
 }
 
 .site-navigation,
-.header-links {
+.header-links,
+.header-links-inner {
   list-style: none;
 }
 
 .site-navigation a,
-.header-links a {
+.header-links a,
+.header-links-inner a {
   color: var(--black);
 }
 
 .site-navigation a:hover,
-.header-links a:hover {
+.header-links a:hover,
+.header-links-inner a:hover {
   opacity: 0.6;
 }
 
 .site-navigation a:focus,
-.header-links a:focus {
+.header-links a:focus,
+.header-links-inner a:focus  {
   opacity: 0.3;
 }
 
@@ -143,22 +147,12 @@ img {
 
 /* Слайдер */
 
-/* Потом назначу гриды
-  .featured-products {
-}
-*/
-
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
-}
-
-.slider-buttons-wrapper {
-  display: flex;
-  align-items: center;
 }
 
 .slider-buttons {
@@ -223,13 +217,6 @@ img {
 }
 
 /* Популярные категории товаров */
-
-/* Потом назначу гриды
-  .popular {
-  width: 1140px;
-  margin: 0 auto;
-}
-*/
 
 .popular-list {
   list-style: none;
@@ -318,25 +305,12 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 
 /* Логотипы партнеров */
 
-/* Потом назначу гриды
-  .partners {
-  width: 1140px;
-  margin: 0 auto;
-}
-*/
-
-/* Здесь был мини-грид, но я решил заменить на флекс - вдруг будет больше логотипов и переполнение?
   .partners-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-}
-*/
-
-.partners-list {
-  display: flex;
-  flex-wrap: wrap;
   list-style: none;
 }
+
 
 .partners-list-item {
   filter: grayscale(100%) opacity(20%);
@@ -375,7 +349,6 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   font-weight: 800;
   font-size: 16px;
   line-height: 28px;
-  /* or 175% */
   color: var(--black);
 }
 
@@ -623,6 +596,7 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   background-color: var(--grey-lightest);
   display: flex;
   flex-wrap: wrap;
+  padding: 0px;
 }
 
 .pagination-list {
@@ -630,6 +604,7 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
+  padding: 0px;
 }
 
 .pagination-button {
@@ -706,15 +681,6 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   grid-template-rows: 1fr 1fr 1fr;
   margin-top: 40px;
 }
-
-/* Здесь был мини-грид
-.header-links {
-  display: grid;
-  grid-template-columns: 50% 25% 25%;
-  grid-column: 2 / 3;
-  margin-left: 0;
-}
-*/
 
 .header-links {
   display: flex;
@@ -796,20 +762,6 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-
-/* Микросетка, ставит кнопки слайдера друг за другом
-  .slider-buttons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-*/
-
-/*
-  .slider-buttons-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-*/
 
 .popular-list {
   display: grid;
