@@ -12,7 +12,10 @@
       <a class="main-header-logo"> <!-- Вынес логотип из nav, чтобы удобнее было строить сетку -->
         <img class="logo logo-active" src="img/logo.svg" width="163" height="35" alt="Логотип DEVICE">
       </a>
-      <input class="search" type="search" placeholder="Поиск по сайту">
+      <form class="search" action="/" method="get">
+          <input class="search-string" type="search" name="search" placeholder="Поиск по сайту" autocomplete="off">
+          <button class="search-button-submit" type="submit">Найти</button>
+      </form>
       <ul class="header-links">
         <li><a class="login-link" href="#">Войти</a></li>
         <li><a class="compare-link" href="#">Сравнить</a></li>
@@ -20,7 +23,28 @@
       </ul>
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li class="site-navigation-item"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="site-navigation-item"><a href="catalog.html">Каталог товаров</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">Виртуальная реальность</a>
+                </li>
+                <li>
+                  <a href="catalog.html">Моноподы для селфи</a>
+                </li>
+                <li>
+                  <a href="#">Экшн-камеры</a>
+                </li>
+                <li>
+                  <a href="#">Фитнес-браслеты</a>
+                </li>
+                <li>
+                  <a href="#">Умные часы</a>
+                </li>
+                <li>
+                  <a href="#">Квадрокоптер</a>
+                </li>
+              </ul>
+          </li>
           <li class="site-navigation-item"><a href="#">Доставка</a></li>
           <li class="site-navigation-item"><a href="#">Гарантия</a></li>
           <li class="site-navigation-item"><a href="#">Контакты</a></li>
@@ -35,18 +59,16 @@
         <h2 class="visually-hidden">Популярные товары</h2>
         <!-- Слайд №1 -->
         <section class="slider slide-1 container">
-          <img src="img/slider-1.png" width="384" height="486" alt="Фото моноподов для селфи">
+          <img class="slider-image" src="img/slider-1.png" width="384" height="486" alt="Фото моноподов для селфи">
           <div class="slider-info-wrapper">
-            <h3>Делай селфи, как Бен Стиллер!</h3>
-            <p>Самая длинная палка для селфи доступна в нашем магазине.
+            <h3>Делай селфи,<br> как Бен Стиллер!</h3>
+            <p>Самая длинная палка для селфи доступна в нашем магазине.<br>
             Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
               <a class="button" href="#">Подробнее</a>
-              <!-- Кнопки переключения слайдов. С помощью JS реализовал бы смену слайдов по событию onclick,
-              а как сделать средствами CSS - пока не думал -->
               <ul class="slider-buttons">
-                <li><button type="button"></button></li>
-                <li><button type="button"></button></li>
-                <li><button type="button"></button></li>
+                <li><button class="slider-button slider-button-active" type="button"></button></li>
+                <li><button class="slider-button" type="button"></button></li>
+                <li><button class="slider-button" type="button"></button></li>
               </ul>
             <dl class="slider-def">
               <div class="slider-def-wrapper">
@@ -67,33 +89,53 @@
         <!-- Слайд №2/ Этот и последующие слайды пока замоментирую для удобства построения сетки -->
         <!--
         <section class="slider slide-2 container">
-          <h3>Худеем правильно!</h3>
-          <img src="img/slider-2.png" width="345" height="485" alt="Фото фитнес-браслета">
-          <p>Мотивирующие фитнес-браслеты помогут найти в себе силы
-          не пропускать занятия и соблюдать диету.</p>
-          <dl class="slider-def">
-            <dt>Без подзарядки</dt>
-            <dd>48 часов</dd>
-          </dl>
-          <a class="button" href="#">Подробнее</a>
+          <img class="slider-image" src="img/slider-2.png" width="345" height="485" alt="Фото фитнес-браслета">
+          <div class="slider-info-wrapper">
+            <h3>Худеем<br> правильно!</h3>
+            <p>Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
+            не пропускать занятия и соблюдать диету.</p>
+            <a class="button" href="#">Подробнее</a>
+            <ul class="slider-buttons">
+              <li><button class="slider-button" type="button"></button></li>
+              <li><button class="slider-button slider-button-active" type="button"></button></li>
+              <li><button class="slider-button" type="button"></button></li>
+            </ul>
+            <dl class="slider-def">
+              <div class="slider-def-wrapper">
+                <dt>Без подзарядки</dt>
+                <dd>48 часов</dd>
+              </div>
+            </dl>
+          </div>
         </section>
         -->
         <!-- Слайд №3 -->
         <!--
         <section class="slider slide-3 container">
-          <h3>Порхает как бабочка, жалит как пчела!</h3>
-          <img src="img/slider-3.png" width="526" height="334" alt="Фото дрона">
-          <p>Этот обычный, на первый взгляд, квадрокоптер оснащен
-          мощным лазером, замаскированным под стандартную камеру.</p>
-          <dl class="slider-def">
-            <dt>Дальность полета</dt>
-            <dd>800 м</dd>
-            <dt>Радиус поражения</dt>
-            <dd>50 м</dd>
-          </dl>
-          <a class="button" href="#">Подробнее</a>
+          <img class="slider-image" src="img/slider-3.png" width="526" height="334" alt="Фото дрона">
+          <div class="slider-info-wrapper">
+            <h3>Порхает как бабочка,<br> жалит как пчела!</h3>
+            <p>Этот обычный, на первый взгляд, квадрокоптер оснащен<br>
+            мощным лазером, замаскированным под стандартную камеру.</p>
+            <a class="button" href="#">Подробнее</a>
+            <ul class="slider-buttons">
+              <li><button class="slider-button" type="button"></button></li>
+              <li><button class="slider-button" type="button"></button></li>
+              <li><button class="slider-button slider-button-active" type="button"></button></li>
+            </ul>
+            <dl class="slider-def">
+              <div class="slider-def-wrapper">
+                <dt>Дальность полета</dt>
+                <dd>800 м</dd>
+              </div>
+              <div class="slider-def-wrapper">
+                <dt>Радиус поражения</dt>
+                <dd>50 м</dd>
+              </div>
+            </dl>
+          </div>
         </section>
-        -->
+      -->
       </div>
       <section class="popular container">
         <h2 class="visually-hidden">Популярные товарные категории</h2>
@@ -101,22 +143,52 @@
         а "фоновая иконка", и можно оформить как CSS background-image у заголовка. Как лучше? Каждый отдельный блок будет кликабелен -->
         <ul class="popular-list">
           <li class="popular-list-item">
-            <a href="#">Виртуальная реальность</a>
+            <a class="popular-link" href="#">
+              <div class="popular-image-wrapper">
+                <img src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
+              </div>
+              <p>Виртуальная реальность</p>
+            </a>
           </li>
           <li class="popular-list-item">
-            <a href="catalog.html">Моноподы для селфи</a>
+            <a class="popular-link" href="catalog.html">
+              <div class="popular-image-wrapper">
+                <img src="img/popular-2.svg" width="86" height="117" alt="Виртуальная реальность">
+              </div>
+              <p>Моноподы<br> для селфи</p>
+            </a>
           </li>
           <li class="popular-list-item">
-            <a href="#">Экшн-камеры</a>
+            <a class="popular-link" href="#">
+              <div class="popular-image-wrapper">
+                <img src="img/popular-3.svg" width="71" height="87" alt="Виртуальная реальность">
+              </div>
+              <p>Экшн-камеры</p>
+            </a>
           </li>
           <li class="popular-list-item">
-            <a href="#">Фитнес-браслеты</a>
+            <a class="popular-link" href="#">
+              <div class="popular-image-wrapper">
+                <img src="img/popular-4.svg" width="107" height="65" alt="Виртуальная реальность">
+              </div>
+              <p>Фитнес-браслеты</p>
+            </a>
           </li>
           <li class="popular-list-item">
-            <a href="#">Умные часы</a>
+            <a class="popular-link" href="#">
+              <div class="popular-image-wrapper">
+                <img src="img/popular-5.svg" width="56" height="98" alt="Виртуальная реальность">
+              </div>
+              <p>Умные часы</p>
+            </a>
           </li>
           <li class="popular-list-item">
-            <a href="#">Квадрокоптеры</a>
+            <a class="popular-link" href="#">
+              <div class="popular-image-wrapper">
+                <img src="img/popular-6.svg" width="132" height="69" alt="Виртуальная реальность">
+              </div>
+              <p>Квадрокоптеры</p>
+            </a>
           </li>
         </ul>
       </section>
@@ -134,23 +206,21 @@
               <p class="delivery-description">Мы с удовольствием доставим ваш товар прямо к вашему
               подъезду совершенно бесплатно! Ведь мы неплохо
               заработаем, поднимая его на ваш этаж.</p>
-              <!-- Фоновая иконка будет, вероятно, background-image -->
             </div>
             <!-- Второй слайд -->
-            <!-- Этот и последующие слайды закомментирую на время построения сетки
+            <!--
             <div class="warranty">
-              <h3>Гарантия</h3>
+              <h3 class="warranty-heading">Гарантия</h3>
               <p class="warranty-description">Если из-за возгорания купленного у нас товара у вас сгорит дом —
-              не переживайте, мы выдадим вам новый.
-              Товар, не дом, конечно же.</p>
+              не переживайте, мы выдадим вам новый. <br>Товар, не дом, конечно же.</p>
             </div>
-             -->
+            -->
             <!-- Третий слайд -->
             <!--
             <div class="loan">
-              <h3>Кредит</h3>
-              <p class="loan-description">Залезть в долговую яму стало проще! Кредитные консультанты
-              подберут для вас наиболее выгодные
+              <h3 class="loan-heading">Кредит</h3>
+              <p class="loan-description">Залезть в долговую яму стало проще! Кредитные консультанты<br>
+              подберут для вас наиболее выгодные<br>
               условия кредита. Выгодные для нашего банка, разумеется.</p>
             </div>
             -->
@@ -177,10 +247,12 @@
         <section class="about">
           <!-- Декоративный ректангл, возможно, span+CSS -->
           <h2>О нас</h2>
-          <p>Огромный выбор гаджетов не оставит равнодушным гика,
-          который есть в каждом из нас.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки
-          России! DEVICE работает со многими транспортными компаниями:</p>
+          <div class="about-description-wrapper">
+            <p>Огромный выбор гаджетов не оставит равнодушным гика,
+            который есть в каждом из нас.</p>
+            <p>Мы можем доставить ваш товар в самые отдаленные точки
+            России! DEVICE работает со многими транспортными компаниями:</p>
+          </div>
           <ul class="logistics-list">
             <li class="logistics-list-item">
               <a href="#">Деловые линии</a>
@@ -199,8 +271,8 @@
           <!-- Декоративный ректангл, возможно, span+CSS -->
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
           проверить работоспособность покупки. Всякое бывает.</p>
-          <a class="contacts-map" href="#">
-            <img src="img/contacts-map.png" width="560" height="222" alt="Карта проезда">
+          <a class="contacts-map" href="">
+            <img src="img/contacts-map.png" width="960" height="546" alt="Карта проезда">
           </a>
           <button class="button contacts-button" type="button">Напишите нам</button>
         </section>
@@ -211,9 +283,9 @@
     <footer class="page-footer">
       <div class="footer-wrapper container">
         <ul class="footer-links">
-          <li><a class="login-link" href="#">Войти</a></li>
-          <li><a class="compare-link" href="#">Сравнить</a></li>
-          <li><a class="cart-link" href="#">Корзина</a></li>
+          <li class="footer-links-item"><a class="login-link" href="#">Войти</a></li>
+          <li class="footer-links-item"><a class="compare-link" href="#">Сравнить</a></li>
+          <li class="footer-links-item"><a class="cart-link" href="#">Корзина</a></li>
         </ul>
         <address class="address">г. Москва, ул. Строителей, 15</address>
         <a class="page-footer-logo"><!-- Вынес логотип из nav, чтобы удобнее было строить сетку -->
@@ -229,33 +301,67 @@
           <div class="phone-wrapper">
             <p>Тел.: <a class="phone" href="tel:+74954959595">+7 (495) 495-95-95</a></p>
           </div>
+          <div class="footer-brick"></div>
         <section class="footer-social">
           <h2 class="visually-hidden">Профили в соц. сетях</h2>
           <ul class="social-list">
-            <li class="social-list-item"><a class="social-button" href="#">Facebook</a></li>
-            <li class="social-list-item"><a class="social-button" href="#">Instagram</a></li>
-            <li class="social-list-item"><a class="social-button" href="#">Twitter</a></li>
+            <li class="social-list-item">
+              <a href="#">
+                <img src="img/icon_facebook.svg" width="32" height="32" alt="Ссылка на аккаунт компании в Facebook">
+                <p class="visually-hidden">Facebook</p>
+              </a>
+            </li>
+            <li class="social-list-item">
+              <a href="#">
+                <img src="img/icon_instagram.svg" width="32" height="32" alt="Ссылка на аккаунт компании в Instagram">
+                <p class="visually-hidden">Instagram</p>
+              </a>
+            </li>
+            <li class="social-list-item">
+              <a href="#">
+                <img src="img/icon_twitter.svg" width="32" height="32" alt="Ссылка на аккаунт компании в Twitter">
+                <p class="visually-hidden">Twitter</p>
+              </a>
+            </li>
           </ul>
         </section>
         <a class="footer-academy-link" href="https://htmlacademy.ru/intensive/htmlcss">
           <!-- Изначально в макете ширина логотипа была дробная (26.94), но валидатор выдал ошибку и я
           поставил целое число, т.к. оно в пределах допуска и разница не влияет на внешний вид -->
-          <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML Academy">
+          <img src="img/logo-html.svg" width="27" height="34" alt="Логотип HTML Academy">
         </a>
       </div>
       <!-- Там еще был элемент оформления, оранжевый прямоугольник, реализованный средствами CSS, его пока не вставляю, если в этом задании только разметку делаем без стилизации. Наверное, это будет <span></span> -->
     </footer>
-    <!-- Пока делаю сетку, закомментирую модальные окна/
-    Модальное окно с формой обратной связи "Напишите нам"
-    <section class="modal modal-write-us">
-      <h2>Напишите нам</h2>
-      Здесь будет сама форма
-      <button class="button modal-button" type="button">Отправить</button>
-      <button class="modal-close" type="button"></button>
-    </section>
-    Модальное окно "Карта проезда"
-    <section class="modal modal-map">
+
+    <!-- Модальное окно с формой обратной связи "Напишите нам" -->
+    <section class="modal modal-writeus">
+     <h2 class="visually-hidden">Напишите нам</h2>
+     <form  action="/" method="post">
+      <div class="writeus-input-wrapper">
+      <label for="name-field">Ваше имя:</label>
+      <input type="text" name="name" id="name-field" placeholder="Имя, Фамилия" required>
+    </div>
+    <div class="writeus-input-wrapper">
+      <label for="email-field">Ваш e-mail:</label>
+      <input type="email" name="email" id="email-field" placeholder="email@example.com" required>
+    </div>
+      <div class="writeus-input-wrapper">
+      <label for="writeus-field">Текст письма:</label>
+      <textarea name="letter" id="writeus-field" placeholder="В свободной форме" required></textarea>
+    </div>
+      <button class="button" type="submit">Отправить</button>
+    </form>
+     <button class="modal-close" type="button"></button>
+
+    <!-- Модальное окно "Карта проезда" -->
+    <section class="modal modal-map" id="show-modal">
       <h2>Карта проезда</h2>
-    </section> -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2249.112548877992!2d37.527429315392446!3d55.68703098053581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1602079839865!5m2!1sru!2sru" width="960" height="550" allowfullscreen title="Офис компании по адресу ул. Строителей 15, Москва"></iframe>
+     <button class="modal-close" aria-label="Закрыть" type="button"></button>
+    </section>
+
+  <script src="js/map.js"></script>
+  <script src="js/writeus.js"></script>
   </body>
 </html>
