@@ -12,14 +12,14 @@
       <a class="main-header-logo"> <!-- Вынес логотип из nav, чтобы удобнее было строить сетку -->
         <img class="logo logo-active" src="img/logo.svg" width="163" height="35" alt="Логотип DEVICE">
       </a>
-      <form class="search" action="/" method="get">
+      <form class="search icon" action="/" method="get">
           <input class="search-string" type="search" name="search" placeholder="Поиск по сайту" autocomplete="off">
           <button class="search-button-submit" type="submit">Найти</button>
       </form>
       <ul class="header-links">
-        <li><a class="login-link" href="#">Войти</a></li>
-        <li><a class="compare-link" href="#">Сравнить</a></li>
-        <li><a class="cart-link" href="#">Корзина</a></li>
+        <li><a class="login-link icon" href="#">Войти</a></li>
+        <li><a class="compare-link icon" href="#">Сравнить</a></li>
+        <li><a class="cart-link icon" href="#">Корзина</a></li>
       </ul>
       <nav class="main-navigation">
         <ul class="site-navigation">
@@ -29,19 +29,19 @@
                   <a href="#">Виртуальная реальность</a>
                 </li>
                 <li>
-                  <a href="catalog.html">Моноподы для селфи</a>
-                </li>
-                <li>
-                  <a href="#">Экшн-камеры</a>
-                </li>
-                <li>
                   <a href="#">Фитнес-браслеты</a>
+                </li>
+                <li>
+                  <a href="#">Квадрокоптер</a>
+                </li>
+                <li>
+                  <a href="#">Моноподы для селфи</a>
                 </li>
                 <li>
                   <a href="#">Умные часы</a>
                 </li>
                 <li>
-                  <a href="#">Квадрокоптер</a>
+                  <a href="#">Экшн-камеры</a>
                 </li>
               </ul>
           </li>
@@ -58,7 +58,6 @@
       <div class="featured-products">
         <h2 class="visually-hidden">Популярные товары</h2>
         <!-- Слайд №1 -->
-
         <section class="slider slide-1 container">
           <img class="slider-image" src="img/slider-1.png" width="384" height="486" alt="Фото моноподов для селфи">
           <div class="slider-info-wrapper">
@@ -87,9 +86,8 @@
             </dl>
           </div>
         </section>
-
         <!-- Слайд №2/ Этот и последующие слайды пока замоментирую для удобства построения сетки -->
-<!--
+        <!--
         <section class="slider slide-2 container">
           <img class="slider-image" src="img/slider-2.png" width="345" height="485" alt="Фото фитнес-браслета">
           <div class="slider-info-wrapper">
@@ -110,9 +108,9 @@
             </dl>
           </div>
         </section>
-      -->
+        -->
         <!-- Слайд №3 -->
-<!--
+        <!--
         <section class="slider slide-3 container">
           <img class="slider-image" src="img/slider-3.png" width="526" height="334" alt="Фото дрона">
           <div class="slider-info-wrapper">
@@ -137,7 +135,7 @@
             </dl>
           </div>
         </section>
--->
+        -->
       </div>
       <section class="popular container">
         <h2 class="visually-hidden">Популярные товарные категории</h2>
@@ -198,7 +196,7 @@
         <h2 class="visually-hidden">Сервисы</h2>
           <div class="services-wrapper container">
             <ul class="services-list">
-              <li class="services-list-item"><button class="button services-button" type="button" class="active">Доставка</button></li>
+              <li class="services-list-item"><button class="button services-button  active" type="button">Доставка</button></li>
               <li class="services-list-item"><button class="button services-button" type="button">Гарантия</button></li>
               <li class="services-list-item"><button class="button services-button" type="button">Кредит</button></li>
             </ul>
@@ -251,13 +249,11 @@
       <div class="double-block container"><!-- Два нижеописанных section на макете как бы в одном блоке, поэтому обернул в общий div-->
         <section class="about">
           <!-- Декоративный ректангл, возможно, span+CSS -->
-          <h2>О нас</h2>
-          <div class="about-description-wrapper">
+          <h2 class="brick">О нас</h2>
             <p>Огромный выбор гаджетов не оставит равнодушным гика,
             который есть в каждом из нас.</p>
             <p>Мы можем доставить ваш товар в самые отдаленные точки
             России! DEVICE работает со многими транспортными компаниями:</p>
-          </div>
           <ul class="logistics-list">
             <li class="logistics-list-item">
               <a href="#">Деловые линии</a>
@@ -272,7 +268,7 @@
           <a class="button button-about" href="#">Подробнее о нас</a>
         </section>
         <section class="contacts">
-          <h2>Контакты</h2>
+          <h2 class="brick">Контакты</h2>
           <!-- Декоративный ректангл, возможно, span+CSS -->
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
           проверить работоспособность покупки. Всякое бывает.</p>
@@ -288,9 +284,9 @@
     <footer class="page-footer">
       <div class="footer-wrapper container">
         <ul class="footer-links">
-          <li class="footer-links-item"><a class="login-link" href="#">Войти</a></li>
-          <li class="footer-links-item"><a class="compare-link" href="#">Сравнить</a></li>
-          <li class="footer-links-item"><a class="cart-link" href="#">Корзина</a></li>
+          <li class="footer-links-item"><a class="login-link icon" href="#">Войти</a></li>
+          <li class="footer-links-item"><a class="compare-link icon" href="#">Сравнить</a></li>
+          <li class="footer-links-item"><a class="cart-link icon" href="#">Корзина</a></li>
         </ul>
         <address class="address">г. Москва, ул. Строителей, 15</address>
         <a class="page-footer-logo"><!-- Вынес логотип из nav, чтобы удобнее было строить сетку -->
@@ -340,11 +336,11 @@
     <section class="modal modal-writeus">
       <h2 class="visually-hidden">Напишите нам</h2>
       <form  action="/" method="post">
-        <div class="writeus-input-wrapper">
+        <div class="writeus-input-wrapper half-width">
           <label for="name-field">Ваше имя:</label>
           <input type="text" name="name" id="name-field" placeholder="Имя, Фамилия" required>
         </div>
-        <div class="writeus-input-wrapper">
+        <div class="writeus-input-wrapper half-width">
           <label for="email-field">Ваш e-mail:</label>
           <input type="email" name="email" id="email-field" placeholder="email@example.com" required>
         </div>
