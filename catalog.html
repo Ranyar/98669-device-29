@@ -79,12 +79,10 @@
             <ul class="sort-arrows">
               <li class="sort-arrow">
                 <a class="sort-arrow-up" href="#">
-                  <!--<img src="img/sort-arrow.svg" width="10" height="11" alt="Кнопка сортировки по возрастанию">-->
                 </a>
               </li>
               <li class="sort-arrow sort-arrow-active">
                 <a class="sort-arrow-down">
-                  <!--<img src="img/sort-arrow.svg" width="10" height="11" alt="Кнопка сортировки по убыванию">-->
                 </a>
                 <!-- Активная сортировка некликабельна -->
               </li>
@@ -147,10 +145,16 @@
               </fieldset>
               <fieldset class="filter-item filter-bluetooth">
                 <legend>Bluetooth</legend>
-                <input  class="visually-hidden" type="radio" name="bluetooth" value="yes" id="bluetooth-yes" checked>
-                  <label for="bluetooth-yes">Есть</label>
-                  <input  class="visually-hidden" type="radio" name="bluetooth" value="no" id="bluetooth-no">
-                  <label for="bluetooth-no">Нет</label>
+                <ul class="filter-list filter-list-bluetooth">
+                  <li>
+                    <input  class="visually-hidden" type="radio" name="bluetooth" value="yes" id="bluetooth-yes" checked>
+                    <label for="bluetooth-yes">Есть</label>
+                  </li>
+                  <li>
+                    <input  class="visually-hidden" type="radio" name="bluetooth" value="no" id="bluetooth-no">
+                    <label for="bluetooth-no">Нет</label>
+                  </li>
+                </ul>
               </fieldset>
               <button class="button" type="submit" name="form-submit">Показать</button>
             </form>
@@ -158,56 +162,56 @@
           <section class="products">
             <h2 class="visually-hidden">Список моноподов для селфи</h2>
             <ul class="product-list">
-              <li>
+              <li class="product-list-tem">
                 <div class="product-wrapper">
                   <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-                  <div class="product-info">
+                  <div class="compare-cart-wrapper">
+                    <a class="button" href="#">В корзину</a>
+                    <a class="compare-button" href="#">Добавить к сравнению</a>
+                  </div>
+                </div>
+                <div class="product-info">
                     <a class="heading product-heading" href="#">Любительская селфи-палка</a>
                     <p class="price">1 100 руб.</p>
-                  </div>
-                  <div class="compare-cart-wrapper">
-                    <a class="button" href="#">В корзину</a>
-                    <a class="compare-button" href="#">Добавить к сравнению</a>
-                  </div>
                 </div>
               </li>
-              <li>
+              <li class="product-list-tem">
                 <div class="product-wrapper">
                   <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-                  <div class="product-info">
-                    <a class="heading product-heading" href="#">Профессиональная<br> селфи-палка</a>
-                    <p class="price">1 500 руб.</p>
-                  </div>
                   <div class="compare-cart-wrapper">
                     <a class="button" href="#">В корзину</a>
                     <a class="compare-button" href="#">Добавить к сравнению</a>
                   </div>
                 </div>
+                <div class="product-info">
+                  <a class="heading product-heading" href="#">Профессиональная<br> селфи-палка</a>
+                  <p class="price">1 500 руб.</p>
+                </div>
               </li>
-              <li>
+              <li class="product-list-tem">
                 <div class="product-wrapper">
                   <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-                  <div class="product-info">
-                    <a class="heading product-heading" href="#">Непотопляемая<br> селфи-палка</a>
-                    <p class="price">2 500 руб.</p>
-                  </div>
                   <div class="compare-cart-wrapper">
                     <a class="button" href="#">В корзину</a>
                     <a class="compare-button" href="#">Добавить к сравнению</a>
                   </div>
                 </div>
+                <div class="product-info">
+                  <a class="heading product-heading" href="#">Непотопляемая<br> селфи-палка</a>
+                  <p class="price">2 500 руб.</p>
+                </div>
               </li>
-              <li>
+              <li class="product-list-tem">
                 <div class="product-wrapper product-new">
                   <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-                  <div class="product-info">
-                    <a class="heading product-heading" href="#">Селфи-палка «Следуй за<br> мной»</a>
-                    <p class="price">4 900 руб.</p>
-                  </div>
                   <div class="compare-cart-wrapper">
                     <a class="button" href="#">В корзину</a>
                     <a class="compare-button" href="#">Добавить к сравнению</a>
                   </div>
+                </div>
+                <div class="product-info">
+                  <a class="heading product-heading" href="#">Селфи-палка «Следуй за<br> мной»</a>
+                  <p class="price">4 900 руб.</p>
                 </div>
               </li>
             </ul>
