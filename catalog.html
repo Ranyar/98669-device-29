@@ -66,9 +66,10 @@
         <div class="color-wrapper-left">
         </div>
         <div class="sort-wrapper container">
-            <div class="filters-heading-wrapper">
-              <p class="heading sort-heading">Фильтр:</p>
-            </div>
+          <div class="filters-heading-wrapper">
+            <p class="heading sort-heading">Фильтр:</p>
+          </div>
+          <div class="sort-line-wrapper">
             <p class="heading sort-heading">Сортировка:</p>
             <ul class="sort-list">
               <li class="sort-list-item"><a class="sort-active">По цене</a></li>
@@ -76,17 +77,19 @@
               <li class="sort-list-item"><a href="#">По популярности</a></li>
             </ul>
             <ul class="sort-arrows">
-                  <li class="sort-arrow">
-                    <a href="#">
-                      <img src="img/sort-arrow.svg" width="10" height="11" alt="Кнопка сортировки по возрастанию">
-                    </a>
-                  </li>
-                  <li class="sort-arrow sort-arrow-active">
-                    <a>
-                      <img src="img/sort-arrow.svg" width="10" height="11" alt="Кнопка сортировки по убыванию">
-                    </a><!-- Активная сортировка некликабельна -->
-                  </li>
+              <li class="sort-arrow">
+                <a class="sort-arrow-up" href="#">
+                  <!--<img src="img/sort-arrow.svg" width="10" height="11" alt="Кнопка сортировки по возрастанию">-->
+                </a>
+              </li>
+              <li class="sort-arrow sort-arrow-active">
+                <a class="sort-arrow-down">
+                  <!--<img src="img/sort-arrow.svg" width="10" height="11" alt="Кнопка сортировки по убыванию">-->
+                </a>
+                <!-- Активная сортировка некликабельна -->
+              </li>
             </ul>
+          </div>
         </div>
         <div class="color-wrapper-right">
         </div>
@@ -99,23 +102,23 @@
             <form class="filter" method="get" action="https://echo.htmlacademy.ru">
               <fieldset class="filter-item">
                 <legend>Стоимость</legend>
-                  <div class="range-filter">
-                    <div class="range-controls">
-                      <div class="scale">
-                        <div class="bar"></div>
-                      </div>
-                      <div class="toggle toggle-min" tabindex="0"></div>
-                      <div class="toggle toggle-max" tabindex="0"></div>
+                <div class="range-filter">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
                     </div>
-                    <div class="price-controls">
-                      <label class="min-price">
-                        от <input class="min-price-input" type="number" name="min-price" value="0">
-                      </label>
-                      <label class="max-price">
-                        до <input class="max-price-input" type="number" name="max-price" value="5000">
-                      </label>
-                    </div>
+                    <div class="toggle toggle-min" tabindex="0"></div>
+                    <div class="toggle toggle-max" tabindex="0"></div>
                   </div>
+                  <div class="price-controls">
+                    <label class="min-price">
+                      от <input class="min-price-input" type="number" name="min-price" value="0">
+                    </label>
+                    <label class="max-price">
+                      до <input class="max-price-input" type="number" name="max-price" value="5000">
+                    </label>
+                  </div>
+                </div>
               </fieldset>
               <fieldset class="filter-item filter-color">
                 <legend>Цвет</legend>
@@ -149,10 +152,10 @@
                   <input  class="visually-hidden" type="radio" name="bluetooth" value="no" id="bluetooth-no">
                   <label for="bluetooth-no">Нет</label>
               </fieldset>
-              <input class="button" type="submit" name="form-submit" value="Показать">
+              <button class="button" type="submit" name="form-submit">Показать</button>
             </form>
           </section>
-          <section>
+          <section class="products">
             <h2 class="visually-hidden">Список моноподов для селфи</h2>
             <ul class="product-list">
               <li>
@@ -269,9 +272,11 @@
             </li>
           </ul>
         </section>
-        <a class="footer-academy-link" href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/logo-html.svg" width="27" height="34" alt="Логотип HTML Academy">
-        </a>
+        <div class="footer-academy-wrapper">
+          <a class="footer-academy-link" href="https://htmlacademy.ru/intensive/htmlcss">
+            <img src="img/logo-html.svg" width="27" height="34" alt="Логотип HTML Academy">
+          </a>
+        </div>
       </div>
     </footer>
   </body>
