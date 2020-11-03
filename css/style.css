@@ -247,7 +247,7 @@ img {
   border: none;
   box-sizing: border-box;
   padding: 9px 42px;
-  outline: 0;
+
 }
 
 .button:hover {
@@ -912,7 +912,6 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   border: none;
-  outline: 0;
   background-color: var(--grey-lightest);
   padding: 25px 26px;
   color: var(--black);
@@ -1145,7 +1144,8 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   padding-right: 60px;
 }
 
-.site-navigation-item:first-child:hover .dropdown-menu {
+.site-navigation-item:first-child:hover .dropdown-menu,
+.site-navigation-item:first-child:focus-within .dropdown-menu {
   display: grid;
   grid-template-columns: 240px 186px 99px;
   grid-template-rows: 1fr 1fr 1fr;
@@ -1532,7 +1532,8 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   opacity: 0;
 }
 
-.product-list-tem:hover::before {
+.product-list-item:hover::before,
+.product-list-item:focus-within::before { /* Добавил focus для доступности */
   content: "";
   position: absolute;
   background-color: var(--transparent-grey);
@@ -1541,7 +1542,8 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   z-index: 1;
 }
 
-.product-list-tem:hover .compare-cart-wrapper {
+.product-list-item:hover .compare-cart-wrapper,
+.product-list-item:focus-within .compare-cart-wrapper { /* Добавил focus для доступности */
   opacity: 1;
 }
 

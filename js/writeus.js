@@ -1,5 +1,6 @@
 const contactsLink = document.querySelector(".contacts-button");
 const contactsPopup = document.querySelector(".modal-writeus");
+const contactsName = contactsPopup.querySelector(".contacts-name");
 const contactsClose = contactsPopup.querySelector(".modal-close");
 
 contactsLink.onclick = function () {
@@ -10,6 +11,7 @@ contactsLink.addEventListener("click", function (evt) {
   evt.preventDefault();
   contactsPopup.classList.add("modal-show");
     console.log('Добавили класс, отладка');
+    contactsName.focus();
 });
 
 contactsClose.addEventListener("click", function (evt) {

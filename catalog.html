@@ -12,7 +12,7 @@
       <a class="main-header-logo" href="index.html">
         <img class="logo" src="img/logo.svg" width="163" height="35" alt="Логотип DEVICE">
       </a>
-      <form class="search icon" action="/" method="get">
+      <form class="search icon" action="https://echo.htmlacademy.ru" method="get">
         <input class="search-string" type="search" placeholder="Поиск по сайту">
         <button class="search-button-submit" type="submit">Найти</button>
       </form>
@@ -71,12 +71,12 @@
           <div class="sort-line-wrapper">
             <p class="heading sort-heading">Сортировка:</p>
             <ul class="sort-list">
-              <li class="sort-list-item"><a class="sort-active">По цене</a></li>
-              <li class="sort-list-item"><a href="#">По типу</a></li>
-              <li class="sort-list-item"><a href="#">По популярности</a></li>
+              <li class="sort-list-item"><a class="sort-active" aria-label="Сейчас выбрана сортировка по цене">По цене</a></li>
+              <li class="sort-list-item"><a href="#" aria-label="Сортировка по типу">По типу</a></li>
+              <li class="sort-list-item"><a href="#" aria-label="Сортировка по популярности">По популярности</a></li>
             </ul>
             <ul class="sort-arrows">
-              <li class="sort-arrow">
+              <li class="sort-arrow" tabindex="0">
                 <a class="sort-arrow-up" href="#">
                 </a>
               </li>
@@ -99,7 +99,7 @@
             <h2 class="visually-hidden">Фильтр товаров</h2>
             <form class="filter" method="get" action="https://echo.htmlacademy.ru">
               <fieldset class="filter-item">
-                <legend>Стоимость</legend>
+                <legend aria-label="Фильтр по стоимости">Стоимость</legend>
                 <div class="range-filter">
                   <div class="range-controls">
                     <div class="scale">
@@ -119,7 +119,7 @@
                 </div>
               </fieldset>
               <fieldset class="filter-item filter-color">
-                <legend>Цвет</legend>
+                <legend aria-label="Фильтр по цвету">Цвет</legend>
                 <ul class="filter-list">
                   <li>
                     <input class="visually-hidden" type="checkbox" name="black" id="filter-black" checked>
@@ -144,7 +144,7 @@
                 </ul>
               </fieldset>
               <fieldset class="filter-item filter-bluetooth">
-                <legend>Bluetooth</legend>
+                <legend aria-label="Фильтр по наличию Bluetooth">Bluetooth</legend>
                 <ul class="filter-list filter-list-bluetooth">
                   <li>
                     <input  class="visually-hidden" type="radio" name="bluetooth" value="yes" id="bluetooth-yes" checked>
@@ -156,18 +156,18 @@
                   </li>
                 </ul>
               </fieldset>
-              <button class="button" type="submit" name="form-submit">Показать</button>
+              <button class="button" type="submit" name="form-submit" aria-label="Показать отфильтрованные товары">Показать</button>
             </form>
           </section>
           <section class="products">
             <h2 class="visually-hidden">Список моноподов для селфи</h2>
             <ul class="product-list">
-              <li class="product-list-tem">
+              <li class="product-list-item">
                 <div class="product-wrapper">
-                  <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                  <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка начального уровня, ничего лишнего">
                   <div class="compare-cart-wrapper">
-                    <a class="button" href="#">В корзину</a>
-                    <a class="compare-button" href="#">Добавить к сравнению</a>
+                    <a class="button" href="#" aria-label="Добавить в корзину любительскую селфи-палку за 1100 рублей">В корзину</a>
+                    <a class="compare-button" href="#" aria-label="Добавить к сравнению любительскую селфи-палку за 1100 рублей">Добавить к сравнению</a>
                   </div>
                 </div>
                 <div class="product-info">
@@ -175,12 +175,12 @@
                     <p class="price">1 100 руб.</p>
                 </div>
               </li>
-              <li class="product-list-tem">
+              <li class="product-list-item">
                 <div class="product-wrapper">
-                  <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+                  <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка, более сложный механизм крепления">
                   <div class="compare-cart-wrapper">
-                    <a class="button" href="#">В корзину</a>
-                    <a class="compare-button" href="#">Добавить к сравнению</a>
+                    <a class="button" href="#" aria-label="Добавить в корзину профессиональную селфи-палку за 1500 рублей">В корзину</a>
+                    <a class="compare-button" href="#" aria-label="Добавить к сравнению профессиональную селфи-палку за 1500 рублей">Добавить к сравнению</a>
                   </div>
                 </div>
                 <div class="product-info">
@@ -188,12 +188,12 @@
                   <p class="price">1 500 руб.</p>
                 </div>
               </li>
-              <li class="product-list-tem">
+              <li class="product-list-item">
                 <div class="product-wrapper">
-                  <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+                  <img src="img/item-3.jpg" width="360" height="380" alt="Селфи-палка с прорезиненной ручкой-поплавком">
                   <div class="compare-cart-wrapper">
-                    <a class="button" href="#">В корзину</a>
-                    <a class="compare-button" href="#">Добавить к сравнению</a>
+                    <a class="button" href="#" aria-label="Добавить в корзину непотопляемую селфи-палку за 2500 рублей">В корзину</a>
+                    <a class="compare-button" href="#" aria-label="Добавить к сравнению профессиональную селфи-палку за 2500 рублей">Добавить к сравнению</a>
                   </div>
                 </div>
                 <div class="product-info">
@@ -201,12 +201,12 @@
                   <p class="price">2 500 руб.</p>
                 </div>
               </li>
-              <li class="product-list-tem">
+              <li class="product-list-item">
                 <div class="product-wrapper product-new">
-                  <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+                  <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка в виде руки из популярного мема, чтобы делать фото в стиле «Следуй за мной»">
                   <div class="compare-cart-wrapper">
-                    <a class="button" href="#">В корзину</a>
-                    <a class="compare-button" href="#">Добавить к сравнению</a>
+                    <a class="button" href="#" aria-label="Добавить в корзину селфи-палку «Следуй за мной» за 4900 рублей">В корзину</a>
+                    <a class="compare-button" href="#" aria-label="Добавить к сравнению селфи-палку «Следуй за мной» за 4900 рублей">Добавить к сравнению</a>
                   </div>
                 </div>
                 <div class="product-info">
@@ -236,7 +236,7 @@
         <ul class="footer-links">
           <li><a class="username-link login-link icon" href="#">Валентин Петухов</a></li>
           <li><a class="logout-link" href="#">Выйти</a></li>
-          <li><a class="compare-link icon" href="#">Сравнить</a></li>
+          <li><a class="compare-link icon" href="#" aria-label="Сравнить выбранные товары">Сравнить</a></li>
           <li><a class="cart-link icon" href="#">Корзина</a></li>
         </ul>
         <address class="address">г. Москва, ул. Строителей, 15</address>
@@ -278,7 +278,7 @@
         </section>
         <div class="footer-academy-wrapper">
           <a class="footer-academy-link" href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="img/logo-html.svg" width="27" height="34" alt="Логотип HTML Academy">
+            <img src="img/logo-html.svg" width="27" height="34" alt="Логотип-ссылка на сайт на сайт HTML Academy">
           </a>
         </div>
       </div>

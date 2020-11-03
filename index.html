@@ -12,7 +12,7 @@
       <a class="main-header-logo"> <!-- Вынес логотип из nav, чтобы удобнее было строить сетку -->
         <img class="logo logo-active" src="img/logo.svg" width="163" height="35" alt="Логотип DEVICE">
       </a>
-      <form class="search icon" action="/" method="get">
+      <form class="search icon" action="https://echo.htmlacademy.ru" method="get">
         <input class="search-string" type="search" name="search" placeholder="Поиск по сайту" autocomplete="off">
         <button class="search-button-submit" type="submit">Найти</button>
       </form>
@@ -35,7 +35,7 @@
                 <a href="#">Квадрокоптер</a>
               </li>
               <li>
-                <a href="#">Моноподы для селфи</a>
+                <a href="catalog.html">Моноподы для селфи</a>
               </li>
               <li>
                 <a href="#">Умные часы</a>
@@ -64,11 +64,11 @@
             <h3>Делай селфи,<br> как Бен Стиллер!</h3>
             <p>Самая длинная палка для селфи доступна в нашем магазине.<br>
             Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-              <a class="button" href="#">Подробнее</a>
+              <a class="button" href="#" aria-label="Подробная информация о селфи-палках">Подробнее</a>
               <ul class="slider-buttons">
-                <li><button class="slider-button slider-button-active" type="button"></button></li>
-                <li><button class="slider-button" type="button"></button></li>
-                <li><button class="slider-button" type="button"></button></li>
+                <li><button class="slider-button slider-button-active" type="button" aria-label="Сейчас выбран первый слайд"></button></li>
+                <li><button class="slider-button" type="button" aria-label="Выбрать второй слайд"></button></li>
+                <li><button class="slider-button" type="button" aria-label="Выбрать третий слайд"></button></li>
               </ul>
             <dl class="slider-def">
               <div class="slider-def-wrapper">
@@ -94,11 +94,11 @@
             <h3>Худеем<br> правильно!</h3>
             <p>Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
             не пропускать занятия и соблюдать диету.</p>
-            <a class="button" href="#">Подробнее</a>
+            <a class="button" href="#" aria-label="Подробная информация о фитнес-браслетах">Подробнее</a>
             <ul class="slider-buttons">
-              <li><button class="slider-button" type="button"></button></li>
-              <li><button class="slider-button slider-button-active" type="button"></button></li>
-              <li><button class="slider-button" type="button"></button></li>
+              <li><button class="slider-button" type="button" aria-label="Выбрать первый слайд"></button></li>
+              <li><button class="slider-button slider-button-active" type="button" aria-label="Сейчас выбран второй слайд"></button></li>
+              <li><button class="slider-button" type="button" aria-label="Выбрать третий слайд"></button></li>
             </ul>
             <dl class="slider-def">
               <div class="slider-def-wrapper">
@@ -117,11 +117,11 @@
             <h3>Порхает как бабочка,<br> жалит как пчела!</h3>
             <p>Этот обычный, на первый взгляд, квадрокоптер оснащен<br>
             мощным лазером, замаскированным под стандартную камеру.</p>
-            <a class="button" href="#">Подробнее</a>
+            <a class="button" href="#" aria-label="Подробная информация о квадрокоптерах">Подробнее</a>
             <ul class="slider-buttons">
-              <li><button class="slider-button" type="button"></button></li>
-              <li><button class="slider-button" type="button"></button></li>
-              <li><button class="slider-button slider-button-active" type="button"></button></li>
+              <li><button class="slider-button" type="button" aria-label="Выбрать первый слайд"></button></li>
+              <li><button class="slider-button" type="button" aria-label="Выбрать второй слайд"></button></li>
+              <li><button class="slider-button slider-button-active" type="button" aria-label="Сейчас выбран третий слайд"></button></li>
             </ul>
             <dl class="slider-def">
               <div class="slider-def-wrapper">
@@ -196,9 +196,9 @@
         <h2 class="visually-hidden">Сервисы</h2>
           <div class="services-wrapper container">
             <ul class="services-list">
-              <li class="services-list-item"><button class="button services-button  active" type="button">Доставка</button></li>
-              <li class="services-list-item"><button class="button services-button" type="button">Гарантия</button></li>
-              <li class="services-list-item"><button class="button services-button" type="button">Кредит</button></li>
+              <li class="services-list-item"><button class="button services-button  active" type="button" aria-label="Сейчас выбран первый слайд - Доставка">Доставка</button></li>
+              <li class="services-list-item"><button class="button services-button" type="button" aria-label="Выбрать второй слайд о Гарантии">Гарантия</button></li>
+              <li class="services-list-item"><button class="button services-button" type="button" aria-label="Выбрать третий слайд о Кредите">Кредит</button></li>
             </ul>
             <!-- Первый слайд -->
 
@@ -233,16 +233,16 @@
         <h2 class="visually-hidden">Логотипы партнеров</h2>
         <ul class="partners-list">
           <li class="partners-list-item">
-            <a href="#"><img src="img/partner-logo-1-color.png" width="260" height="100" alt="Логотип DJI"></a>
+            <a href="#"><img src="img/partner-logo-1-color.png" width="260" height="100" alt="Логотип-ссылка на сайт DJI"></a>
           </li>
           <li class="partners-list-item">
-            <a href="#"><img src="img/partner-logo-2-color.png" width="260" height="100" alt="Логотип SP Gadgets"></a>
+            <a href="#"><img src="img/partner-logo-2-color.png" width="260" height="100" alt="Логотип-ссылка на сайт SP Gadgets"></a>
           </li>
           <li class="partners-list-item">
-            <a href="#"><img src="img/partner-logo-3-color.png" width="260" height="100" alt="Логотип GoPro"></a>
+            <a href="#"><img src="img/partner-logo-3-color.png" width="260" height="100" alt="Логотип-ссылка на сайт GoPro"></a>
           </li>
           <li class="partners-list-item">
-            <a href="#"><img src="img/partner-logo-4-color.png" width="260" height="100" alt="Логотип Vive"></a>
+            <a href="#"><img src="img/partner-logo-4-color.png" width="260" height="100" alt="Логотип-ссылка на сайт Vive"></a>
           </li>
         </ul>
       </section>
@@ -273,9 +273,9 @@
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
           проверить работоспособность покупки. Всякое бывает.</p>
           <a class="contacts-map" href="">
-            <img src="img/contacts-map.png" width="960" height="546" alt="Карта проезда">
+            <img src="img/contacts-map.png" width="960" height="546" alt="Карта проезда. При клике откроется высплывающее окно с интерактивной картой">
           </a>
-          <button class="button contacts-button" type="button">Напишите нам</button>
+          <button class="button contacts-button" type="button" aria-label="Открыть форму обратной связи">Напишите нам</button>
         </section>
       </div>
     </main>
@@ -284,8 +284,8 @@
     <footer class="page-footer">
       <div class="footer-wrapper container">
         <ul class="footer-links">
-          <li class="footer-links-item"><a class="login-link icon" href="#">Войти</a></li>
-          <li class="footer-links-item"><a class="compare-link icon" href="#">Сравнить</a></li>
+          <li class="footer-links-item"><a class="login-link icon" href="#" aria-label="Войти в личный аккаунт">Войти</a></li>
+          <li class="footer-links-item"><a class="compare-link icon" href="#" aria-label="Сравнить выбранные товары">Сравнить</a></li>
           <li class="footer-links-item"><a class="cart-link icon" href="#">Корзина</a></li>
         </ul>
         <address class="address">г. Москва, ул. Строителей, 15</address>
@@ -327,7 +327,7 @@
         </section>
         <div class="footer-academy-wrapper">
           <a class="footer-academy-link" href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="img/logo-html.svg" width="27" height="34" alt="Логотип HTML Academy">
+            <img src="img/logo-html.svg" width="27" height="34" alt="Логотип-ссылка на сайт HTML Academy">
           </a>
         </div>
       </div>
@@ -336,10 +336,10 @@
     <!-- Модальное окно с формой обратной связи "Напишите нам" -->
     <section class="modal modal-writeus">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <form  action="/" method="post">
+      <form  action="https://echo.htmlacademy.ru" method="post">
         <div class="writeus-input-wrapper">
           <label for="name-field">Ваше имя:</label>
-          <input type="text" name="name" id="name-field" placeholder="Имя,Фамилия" required>
+          <input class="contacts-name" type="text" name="name" id="name-field" placeholder="Имя,Фамилия" required>
         </div>
         <div class="writeus-input-wrapper">
           <label for="email-field">Ваш e-mail:</label>
@@ -351,7 +351,7 @@
         </div>
         <button class="button modal-button" type="submit">Отправить</button>
       </form>
-      <button class="modal-close" type="button"></button>
+      <button class="modal-close" type="button" aria-label="Закрыть форму обратной связи"></button>
     </section>
 
     <!-- Модальное окно "Карта проезда" -->
@@ -360,8 +360,8 @@
       <noscript>
         <img src="img/map-popup-noscript.png" width="994" height="593" alt="Карта проезда в магазин DEVICE по адресу ул. Строителей, 15">
       </noscript>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2249.112548877992!2d37.527429315392446!3d55.68703098053581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1602079839865!5m2!1sru!2sru" width="960" height="550" allowfullscreen title="Офис компании по адресу ул. Строителей 15, Москва"></iframe>
-      <button class="modal-close" aria-label="Закрыть" type="button"></button>
+      <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2249.112548877992!2d37.527429315392446!3d55.68703098053581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1602079839865!5m2!1sru!2sru" width="960" height="550" allowfullscreen title="Офис компании по адресу ул. Строителей 15, Москва"></iframe>
+      <button class="modal-close" aria-label="Закрыть интерактивную карту" type="button"></button>
     </section>
 
     <script src="js/map.js"></script>

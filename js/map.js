@@ -1,10 +1,12 @@
 const mapLink = document.querySelector(".contacts-map");
 const mapPopup = document.querySelector(".modal-map");
+const mapFrame = mapPopup.querySelector(".map-frame");
 const mapClose = mapPopup.querySelector(".modal-close");
 
 mapLink.addEventListener("click", function (evt) {
   evt.preventDefault();
   mapPopup.classList.add("modal-show");
+  mapFrame.focus();
 });
 
 mapClose.addEventListener("click", function (evt) {
