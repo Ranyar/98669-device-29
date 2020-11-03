@@ -153,6 +153,10 @@ img {
 
 /* Слайдер */
 
+.featured-products {
+  position: relative;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -165,7 +169,7 @@ img {
   list-style: none;
   display: flex;
   position: absolute;
-  top: 93%;
+  top: 59%;
   right: 23%;
   padding-left: 0px;
   transform: translate(-3px);
@@ -260,6 +264,14 @@ img {
   var(--yellow-dark) 100%,
   transparent 100%);
   opacity: 0.3;
+}
+
+.slide-active {
+  display: block;
+}
+
+.slide-hidden {
+  display: none;
 }
 
 /* Популярные категории товаров */
