@@ -76,11 +76,11 @@
               <li class="sort-list-item"><a href="#" aria-label="Сортировка по популярности">По популярности</a></li>
             </ul>
             <ul class="sort-arrows">
-              <li class="sort-arrow" tabindex="0">
+              <li class="sort-arrow" tabindex="0" aria-label="Сортировка по возрастанию">
                 <a class="sort-arrow-up" href="#">
                 </a>
               </li>
-              <li class="sort-arrow sort-arrow-active">
+              <li class="sort-arrow sort-arrow-active" aria-label="Сортировка по убыванию">
                 <a class="sort-arrow-down">
                 </a>
                 <!-- Активная сортировка некликабельна -->
@@ -99,7 +99,7 @@
             <h2 class="visually-hidden">Фильтр товаров</h2>
             <form class="filter" method="get" action="https://echo.htmlacademy.ru">
               <fieldset class="filter-item">
-                <legend aria-label="Фильтр по стоимости">Стоимость</legend>
+                <legend>Стоимость</legend>
                 <div class="range-filter">
                   <div class="range-controls">
                     <div class="scale">
@@ -119,7 +119,7 @@
                 </div>
               </fieldset>
               <fieldset class="filter-item filter-color">
-                <legend aria-label="Фильтр по цвету">Цвет</legend>
+                <legend>Цвет</legend>
                 <ul class="filter-list">
                   <li>
                     <input class="visually-hidden" type="checkbox" name="black" id="filter-black" checked>
@@ -144,7 +144,7 @@
                 </ul>
               </fieldset>
               <fieldset class="filter-item filter-bluetooth">
-                <legend aria-label="Фильтр по наличию Bluetooth">Bluetooth</legend>
+                <legend>Bluetooth</legend>
                 <ul class="filter-list filter-list-bluetooth">
                   <li>
                     <input  class="visually-hidden" type="radio" name="bluetooth" value="yes" id="bluetooth-yes" checked>
@@ -156,7 +156,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <button class="button" type="submit" name="form-submit" aria-label="Показать отфильтрованные товары">Показать</button>
+              <button class="button" type="submit" name="form-submit">Показать</button>
             </form>
           </section>
           <section class="products">
@@ -164,7 +164,7 @@
             <ul class="product-list">
               <li class="product-list-item">
                 <div class="product-wrapper">
-                  <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка начального уровня, ничего лишнего">
+                  <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
                   <div class="compare-cart-wrapper">
                     <a class="button" href="#" aria-label="Добавить в корзину любительскую селфи-палку за 1100 рублей">В корзину</a>
                     <a class="compare-button" href="#" aria-label="Добавить к сравнению любительскую селфи-палку за 1100 рублей">Добавить к сравнению</a>
@@ -177,7 +177,7 @@
               </li>
               <li class="product-list-item">
                 <div class="product-wrapper">
-                  <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка, более сложный механизм крепления">
+                  <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
                   <div class="compare-cart-wrapper">
                     <a class="button" href="#" aria-label="Добавить в корзину профессиональную селфи-палку за 1500 рублей">В корзину</a>
                     <a class="compare-button" href="#" aria-label="Добавить к сравнению профессиональную селфи-палку за 1500 рублей">Добавить к сравнению</a>
@@ -203,7 +203,7 @@
               </li>
               <li class="product-list-item">
                 <div class="product-wrapper product-new">
-                  <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка в виде руки из популярного мема, чтобы делать фото в стиле «Следуй за мной»">
+                  <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка в виде руки из популярного мема, чтобы делать фото в стиле «Следуй за мной»"">
                   <div class="compare-cart-wrapper">
                     <a class="button" href="#" aria-label="Добавить в корзину селфи-палку «Следуй за мной» за 4900 рублей">В корзину</a>
                     <a class="compare-button" href="#" aria-label="Добавить к сравнению селфи-палку «Следуй за мной» за 4900 рублей">Добавить к сравнению</a>
