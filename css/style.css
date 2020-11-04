@@ -23,6 +23,8 @@
   --grey-shadow: rgba(0, 0, 0, 0.18);
   --special-green: #91C92F;
   --special-greyscale: #B7B7B7;
+  --special-grey: #ABABAB;
+  --special-grey-label: #A6A6A6;
   /* Статус */
   --status: #F6DADA;
 }
@@ -64,10 +66,51 @@
   font-style: normal;
 }
 
+/* Анимация */
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+
 /* Общие стили */
 
 body {
-  min-width: 1440px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
   font-weight: 300;
@@ -300,9 +343,8 @@ img {
   background-color: var(--yellow-dark);
 }
 
-.popular-list-item a:active {
+.popular-list-item:active img {
   opacity: 0.3;
-  background-color: var(--yellow-dark);
 }
 
 .popular-image-wrapper {
@@ -568,7 +610,7 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 }
 
 .contacts-map img {
-  margin-bottom: 68px;
+  margin-bottom: 74px;
 }
 
 .contacts-button {
@@ -627,10 +669,11 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   padding-top: 6px;
   display: flex;
   padding-left: 0px;
+  flex-wrap: wrap;
 }
 
-.navigation-list-item:not(:last-child) {
-  margin-right: 33px;
+.navigation-list-item {
+  margin-left: 33px;
 }
 
 .navigation-list a {
@@ -929,6 +972,10 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   color: var(--transparent-black);
 }
 
+.pagination-button:not(.numbers):hover {
+  background-color: var(--grey-dark);
+}
+
 .pagination-button.numbers {
   color: var(--black);
   padding: 5px;
@@ -953,8 +1000,10 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   color: var(--black);
 }
 
-.pagination-button.numbers-active:hover {
+.pagination-button.numbers-active:hover,
+.pagination-button.numbers-active:active {
   background: none;
+  color: var(--black);
 }
 
 /* Grid */
@@ -1316,12 +1365,12 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   gap: 40px;
   display: grid;
   grid-template-columns: 560px 560px;
-  padding-bottom: 78px;
+  padding-bottom: 84px;
 }
 
 .footer-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 461px 1fr;
   grid-template-rows: 1fr 1fr 100px;
   position: relative;
 }
@@ -1412,7 +1461,7 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-left: 0px;
+  padding-left: 33px;
   padding-top: 30px;
 }
 
@@ -1613,6 +1662,7 @@ li:nth-child(3) .services-button:nth-child(1):focus {
 
 .modal-show {
   display: block;
+  animation: bounce 0.6s;
 }
 
 .modal-close {
@@ -1729,8 +1779,13 @@ li:nth-child(3) .services-button:nth-child(1):focus {
   padding-right: 34px;
 }
 
-input:invalid {
+.modal-error {
+  animation: shake 0.6s;
+}
+
+.modal-error input {
   background-color: var(--status);
+  border: 2px solid var(--status);
 }
 
 /* Модальное окно с картой */
@@ -1817,8 +1872,8 @@ input:invalid {
   width: 4px;
   height: 4px;
   padding: 0;
-  border: 8px solid #ffffff;
-  background-color: #ababab;
+  border: 8px solid var(--white);
+  background-color: var(--special-grey);
   border-radius: 50%;
   box-shadow: 0 2px 2px 0 var(--grey-shadow);
   cursor: pointer;
@@ -1896,7 +1951,7 @@ input:invalid {
 
 .filter-color input:disabled + label,
 .filter-bluetooth input:disabled + label {
-  color: var(--grey);
+  color: var(--special-grey-label);
 }
 
 .filter-color label::before,
