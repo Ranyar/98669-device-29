@@ -13,7 +13,8 @@
         <img class="logo logo-active" src="img/logo.svg" width="163" height="35" alt="Логотип DEVICE">
       </a>
       <form class="search icon" action="https://echo.htmlacademy.ru" method="get">
-        <input class="search-string" type="search" name="search" placeholder="Поиск по сайту" autocomplete="off">
+        <label class="visually-hidden" for="search">Поиск</label>
+        <input class="search-string" type="search" name="search" id="search" placeholder="Поиск по сайту" autocomplete="off">
         <button class="search-button-submit" type="submit">Найти</button>
       </form>
       <ul class="header-links">
@@ -81,6 +82,7 @@
           </div>
         </section>
         <!-- Слайд №2/ Этот и последующие слайды пока замоментирую для удобства построения сетки -->
+        <!--
         <section class="slider slide-2 slide-hidden container">
           <img class="slider-image" src="img/slider-2.png" width="345" height="485" alt="Фото фитнес-браслета">
           <div class="slider-info-wrapper">
@@ -96,7 +98,9 @@
             </dl>
           </div>
         </section>
+        -->
         <!-- Слайд №3 -->
+        <!--
         <section class="slider slide-3 slide-hidden container">
           <img class="slider-image" src="img/slider-3.png" width="526" height="334" alt="Фото дрона">
           <div class="slider-info-wrapper">
@@ -116,11 +120,12 @@
             </dl>
           </div>
         </section>
-      <ul class="slider-buttons">
-        <li><button class="slider-button slider-button-1 slider-button-active" type="button" aria-label="Сейчас выбран первый слайд"></button></li>
-        <li><button class="slider-button slider-button-2" type="button" aria-label="Выбрать второй слайд"></button></li>
-        <li><button class="slider-button slider-button-3" type="button" aria-label="Выбрать третий слайд"></button></li>
-      </ul>
+        -->
+        <ul class="slider-buttons">
+          <li><button class="slider-button slider-button-1 slider-button-active" type="button" aria-label="Сейчас выбран первый слайд"></button></li>
+          <li><button class="slider-button slider-button-2" type="button" aria-label="Выбрать второй слайд"></button></li>
+          <li><button class="slider-button slider-button-3" type="button" aria-label="Выбрать третий слайд"></button></li>
+        </ul>
       </div>
       <section class="popular container">
         <h2 class="visually-hidden">Популярные товарные категории</h2>
@@ -186,14 +191,12 @@
               <li class="services-list-item"><button class="button services-button" type="button" aria-label="Выбрать третий слайд о Кредите">Кредит</button></li>
             </ul>
             <!-- Первый слайд -->
-
             <div class="delivery services-icon">
               <h3 class="services-heading">Доставка</h3>
               <p class="services-description">Мы с удовольствием доставим ваш товар прямо к вашему
               подъезду совершенно бесплатно! Ведь мы неплохо<br>
               заработаем, поднимая его на ваш этаж.</p>
             </div>
-
             <!-- Второй слайд -->
             <!--
             <div class="warranty services-icon">
@@ -231,9 +234,8 @@
           </li>
         </ul>
       </section>
-      <div class="double-block container"><!-- Два нижеописанных section на макете как бы в одном блоке, поэтому обернул в общий div-->
+      <div class="double-block container">
         <section class="about">
-          <!-- Декоративный ректангл, возможно, span+CSS -->
           <h2 class="brick">О нас</h2>
           <p>Огромный выбор гаджетов не оставит равнодушным гика,
           который есть в каждом из нас.</p>
@@ -254,17 +256,15 @@
         </section>
         <section class="contacts">
           <h2 class="brick">Контакты</h2>
-          <!-- Декоративный ректангл, возможно, span+CSS -->
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
           проверить работоспособность покупки. Всякое бывает.</p>
           <a class="contacts-map" href="">
             <img src="img/contacts-map.png" width="960" height="546" alt="Карта проезда">
           </a>
-          <a class="button contacts-button" type="button" aria-label="Открыть форму обратной связи" href="#">Напишите нам</a>
+          <a class="button contacts-button" aria-label="Открыть форму обратной связи" href="#">Напишите нам</a>
         </section>
       </div>
     </main>
-
     <!-- Футер, который показывается неавторизованному пользователю -->
     <footer class="page-footer">
       <div class="footer-wrapper container">
@@ -317,7 +317,6 @@
         </div>
       </div>
     </footer>
-
     <!-- Модальное окно с формой обратной связи "Напишите нам" -->
     <section class="modal modal-writeus">
       <h2 class="visually-hidden">Напишите нам</h2>
@@ -338,7 +337,6 @@
       </form>
       <button class="modal-close" type="button" aria-label="Закрыть форму обратной связи"></button>
     </section>
-
     <!-- Модальное окно "Карта проезда" -->
     <section class="modal modal-map" id="show-modal">
       <h2 class="visually-hidden">Карта проезда</h2>
@@ -348,7 +346,6 @@
       <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2249.112548877992!2d37.527429315392446!3d55.68703098053581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1602079839865!5m2!1sru!2sru" width="960" height="550" allowfullscreen title="Офис компании по адресу ул. Строителей 15, Москва"></iframe>
       <button class="modal-close" aria-label="Закрыть интерактивную карту" type="button"></button>
     </section>
-
     <script src="js/map.js"></script>
     <script src="js/writeus.js"></script>
   </body>
