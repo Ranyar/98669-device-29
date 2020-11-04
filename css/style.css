@@ -199,10 +199,6 @@ img {
   right: 2px;
 }
 
-.slider-button-2::active {
-  background-color: var(--black);
-}
-
 .slider h3 {
   font-family: "Gilroy", "Arial", sans-serif;
   font-style: normal;
