@@ -343,7 +343,8 @@ img {
   background-color: var(--yellow-dark);
 }
 
-.popular-list-item:active img {
+.popular-list-item:active img,
+.popular-list-item:active p {
   opacity: 0.3;
 }
 
